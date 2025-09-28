@@ -91,6 +91,12 @@ class TradeLensAI:
             # Build system prompt with context
             system_prompt = self.build_system_prompt(context)
 
+            # Add context-specific prompt if available
+            if self.prompt_manager:
+                context_specific = self.prompt_manager.get_context_specific_prompt(user_message, context)
+                if context_specific:
+                    system_prompt += "\n\n" + context_specific
+
             # Build conversation history
             messages = [{"role": "system", "content": system_prompt}]
 
@@ -164,11 +170,24 @@ Example: "{symbol} at ${price} with RSI of {rsi} shows good momentum - like a ca
         symbol = context.get('symbol', 'UNKNOWN')
         price = context.get('price', 0)
         rsi = context.get('rsi', 50)
+        macd = context.get('macd', 0)
+        sma = context.get('sma_20', 0)
         day_change = context.get('dayChange', 0)
 
         user_lower = user_message.lower()
 
-        if any(word in user_lower for word in ['trend', 'direction', 'going']):
+        # Handle educational "what is" questions first
+        if any(phrase in user_lower for phrase in ['what is rsi', 'what\'s rsi', 'explain rsi', 'rsi means']):
+            return "RSI (Relative Strength Index) measures momentum on a 0-100 scale. Think of it like a speedometer for stocks - above 70 means overbought (going too fast), below 30 means oversold (going too slow), and 30-70 is the normal cruising range."
+
+        elif any(phrase in user_lower for phrase in ['what is macd', 'what\'s macd', 'explain macd', 'macd means']):
+            return "MACD (Moving Average Convergence Divergence) shows the relationship between two moving averages. Like two cars on a highway - when the faster one (MACD line) is above the slower one (signal line), it suggests upward momentum, and vice versa."
+
+        elif any(phrase in user_lower for phrase in ['what is sma', 'what\'s sma', 'explain sma', 'sma means', 'simple moving average']):
+            return "SMA (Simple Moving Average) is the average price over a set period, like the last 20 days. Think of it as the stock's 'normal' price - when current price is above SMA, it's running hot; below SMA means it's running cool."
+
+        # Handle ticker-specific analysis
+        elif any(word in user_lower for word in ['trend', 'direction', 'going']):
             if day_change > 2:
                 return f"{symbol} is trending up strongly at ${price}, up {day_change:.1f}% today. The momentum looks positive."
             elif day_change < -2:
@@ -184,7 +203,7 @@ Example: "{symbol} at ${price} with RSI of {rsi} shows good momentum - like a ca
             else:
                 return f"{symbol} at ${price} with RSI of {rsi} shows balanced momentum. Do your research and consider your risk tolerance."
 
-        elif any(word in user_lower for word in ['rsi', 'indicator', 'technical']):
+        elif any(word in user_lower for word in ['rsi', 'indicator', 'technical']) and not any(phrase in user_lower for phrase in ['what is', 'what\'s', 'explain', 'means']):
             if rsi > 70:
                 return f"RSI at {rsi} means {symbol} is overbought - like a car going too fast. It might slow down soon."
             elif rsi < 30:

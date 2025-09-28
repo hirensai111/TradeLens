@@ -53,12 +53,18 @@ CURRENT STOCK DATA FOR {symbol}:
 RESPONSE GUIDELINES:
 1. Keep responses to 3 sentences maximum
 2. Use friendly, conversational language (like explaining to a friend)
-3. Always reference actual numbers from the current data
-4. Use analogies to explain complex concepts
-5. Be specific and actionable when possible
-6. Focus on education, not financial advice
-7. If RSI is mentioned, explain what the current {rsi:.1f} means
-8. If trend questions come up, reference the {trend} trend and {day_change:+.1f}% daily move
+3. For "what is" questions (like "what is RSI"), provide educational explanations using analogies
+4. For ticker-specific questions, reference actual numbers from the current data
+5. Use analogies to explain complex concepts
+6. Be specific and actionable when possible
+7. Focus on education, not financial advice
+8. If RSI is mentioned, explain what the current {rsi:.1f} means
+9. If trend questions come up, reference the {trend} trend and {day_change:+.1f}% daily move
+
+EDUCATIONAL EXPLANATIONS FOR "WHAT IS" QUESTIONS:
+- "What is RSI?": RSI (Relative Strength Index) measures momentum on a 0-100 scale. Think of it like a speedometer for stocks - above 70 means overbought (going too fast), below 30 means oversold (going too slow), and 30-70 is the normal cruising range.
+- "What is MACD?": MACD (Moving Average Convergence Divergence) shows the relationship between two moving averages. Like two cars on a highway - when the faster one (MACD line) is above the slower one (signal line), it suggests upward momentum, and vice versa.
+- "What is SMA?": SMA (Simple Moving Average) is the average price over a set period, like the last 20 days. Think of it as the stock's 'normal' price - when current price is above SMA, it's running hot; below SMA means it's running cool.
 
 EXAMPLE RESPONSES:
 - For trend questions: "{symbol} at ${price:,.2f} is showing a {trend} trend with {abs(day_change):.1f}% {'gain' if day_change > 0 else 'decline'} today - {'momentum is building' if abs(day_change) > 2 else 'moving at a steady pace'}."
@@ -83,8 +89,27 @@ IMPORTANT REMINDERS:
         price = context.get('price', 0)
         day_change = context.get('dayChange', 0)
 
-        # RSI-focused questions
-        if any(word in user_lower for word in ['rsi', 'overbought', 'oversold', 'momentum']):
+        # Educational "what is" questions
+        if any(phrase in user_lower for phrase in ['what is rsi', 'what\'s rsi', 'explain rsi', 'rsi means']):
+            return """
+EDUCATIONAL RESPONSE REQUIRED:
+The user is asking to learn what RSI is. Provide a clear, beginner-friendly explanation using the car speedometer analogy. Focus on education, not the current stock's RSI value.
+"""
+
+        elif any(phrase in user_lower for phrase in ['what is macd', 'what\'s macd', 'explain macd', 'macd means']):
+            return """
+EDUCATIONAL RESPONSE REQUIRED:
+The user is asking to learn what MACD is. Provide a clear, beginner-friendly explanation using the two cars on highway analogy. Focus on education, not the current stock's MACD value.
+"""
+
+        elif any(phrase in user_lower for phrase in ['what is sma', 'what\'s sma', 'explain sma', 'sma means', 'simple moving average']):
+            return """
+EDUCATIONAL RESPONSE REQUIRED:
+The user is asking to learn what SMA is. Provide a clear, beginner-friendly explanation using the temperature analogy. Focus on education, not the current stock's SMA value.
+"""
+
+        # RSI-focused analysis questions (not educational)
+        elif any(word in user_lower for word in ['rsi', 'overbought', 'oversold', 'momentum']) and not any(phrase in user_lower for phrase in ['what is', 'what\'s', 'explain', 'means']):
             return f"""
 FOCUS ON RSI ANALYSIS:
 Current RSI for {symbol}: {rsi:.1f}

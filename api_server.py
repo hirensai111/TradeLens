@@ -95,10 +95,21 @@ class StockAnalyzerAPI:
         symbol = context.get('symbol', 'the stock')
         price = context.get('price', 0)
         rsi = context.get('rsi', 50)
+        macd = context.get('macd', 0)
         day_change = context.get('day_change', 0)
 
-        # RSI questions
-        if 'rsi' in message or 'relative strength' in message:
+        # Educational "what is" questions first
+        if any(phrase in message for phrase in ['what is rsi', 'what\'s rsi', 'explain rsi', 'rsi means']):
+            return "RSI (Relative Strength Index) measures momentum on a 0-100 scale. Think of it like a speedometer for stocks - above 70 means overbought (going too fast), below 30 means oversold (going too slow), and 30-70 is the normal cruising range."
+
+        elif any(phrase in message for phrase in ['what is macd', 'what\'s macd', 'explain macd', 'macd means']):
+            return "MACD (Moving Average Convergence Divergence) shows the relationship between two moving averages. Like two cars on a highway - when the faster one (MACD line) is above the slower one (signal line), it suggests upward momentum, and vice versa."
+
+        elif any(phrase in message for phrase in ['what is sma', 'what\'s sma', 'explain sma', 'sma means', 'simple moving average']):
+            return "SMA (Simple Moving Average) is the average price over a set period, like the last 20 days. Think of it as the stock's 'normal' price - when current price is above SMA, it's running hot; below SMA means it's running cool."
+
+        # RSI analysis questions (not educational)
+        elif ('rsi' in message or 'relative strength' in message) and not any(phrase in message for phrase in ['what is', 'what\'s', 'explain', 'means']):
             if rsi > 70:
                 return f"RSI at {rsi:.1f} means {symbol} is overbought - like a car going too fast. It might slow down soon. Consider waiting for a pullback."
             elif rsi < 30:

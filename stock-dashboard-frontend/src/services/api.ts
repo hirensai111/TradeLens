@@ -486,6 +486,19 @@ class APIService {
                      movingAverages?.sma_20 || latestPrice;
         const sma50 = movingAverages?.sma_50 || latestPrice;
 
+        // Educational "what is" questions first (prioritize over data-driven responses)
+        if (lowerMessage.includes('what is rsi') || lowerMessage.includes("what's rsi") || lowerMessage.includes('explain rsi') || lowerMessage.includes('rsi means')) {
+          return "RSI (Relative Strength Index) measures momentum on a 0-100 scale. Think of it like a speedometer for stocks - above 70 means overbought (going too fast), below 30 means oversold (going too slow), and 30-70 is the normal cruising range.";
+        }
+
+        if (lowerMessage.includes('what is macd') || lowerMessage.includes("what's macd") || lowerMessage.includes('explain macd') || lowerMessage.includes('macd means')) {
+          return "MACD (Moving Average Convergence Divergence) shows the relationship between two moving averages. Like two cars on a highway - when the faster one (MACD line) is above the slower one (signal line), it suggests upward momentum, and vice versa.";
+        }
+
+        if (lowerMessage.includes('what is sma') || lowerMessage.includes("what's sma") || lowerMessage.includes('explain sma') || lowerMessage.includes('sma means') || lowerMessage.includes('simple moving average')) {
+          return "SMA (Simple Moving Average) is the average price over a set period, like the last 20 days. Think of it as the stock's 'normal' price - when current price is above SMA, it's running hot; below SMA means it's running cool.";
+        }
+
         // Generate data-driven responses
         if (lowerMessage.includes('trend') || lowerMessage.includes("what's the trend")) {
           let trendAnalysis = `${ticker} is currently at $${currentPrice.toFixed(2)}`;
@@ -533,7 +546,7 @@ class APIService {
           return trendAnalysis;
         }
 
-        if (lowerMessage.includes('rsi') || lowerMessage.includes('relative strength')) {
+        if ((lowerMessage.includes('rsi') || lowerMessage.includes('relative strength')) && !lowerMessage.includes('what is') && !lowerMessage.includes("what's") && !lowerMessage.includes('explain') && !lowerMessage.includes('means')) {
           const rsiValue = rsi.toFixed(1);
           const rsiDescription = rsiSignal === 'overbought' ? 'overbought' :
                                 rsiSignal === 'oversold' ? 'oversold' : 'neutral';
@@ -547,7 +560,7 @@ class APIService {
           }
         }
 
-        if (lowerMessage.includes('macd') || lowerMessage.includes('macd signal')) {
+        if ((lowerMessage.includes('macd') || lowerMessage.includes('macd signal')) && !lowerMessage.includes('what is') && !lowerMessage.includes("what's") && !lowerMessage.includes('explain') && !lowerMessage.includes('means')) {
           const macdValue = macd.toFixed(3);
 
           if (macdSignal === 'bullish') {
@@ -823,8 +836,21 @@ class APIService {
     const lowerMessage = message.toLowerCase();
     const stockContext = ticker ? ` for ${ticker}` : '';
 
-    // RSI questions
-    if (lowerMessage.includes('rsi') || lowerMessage.includes('relative strength')) {
+    // Educational "what is" questions first
+    if (lowerMessage.includes('what is rsi') || lowerMessage.includes("what's rsi") || lowerMessage.includes('explain rsi') || lowerMessage.includes('rsi means')) {
+      return "RSI (Relative Strength Index) measures momentum on a 0-100 scale. Think of it like a speedometer for stocks - above 70 means overbought (going too fast), below 30 means oversold (going too slow), and 30-70 is the normal cruising range.";
+    }
+
+    if (lowerMessage.includes('what is macd') || lowerMessage.includes("what's macd") || lowerMessage.includes('explain macd') || lowerMessage.includes('macd means')) {
+      return "MACD (Moving Average Convergence Divergence) shows the relationship between two moving averages. Like two cars on a highway - when the faster one (MACD line) is above the slower one (signal line), it suggests upward momentum, and vice versa.";
+    }
+
+    if (lowerMessage.includes('what is sma') || lowerMessage.includes("what's sma") || lowerMessage.includes('explain sma') || lowerMessage.includes('sma means') || lowerMessage.includes('simple moving average')) {
+      return "SMA (Simple Moving Average) is the average price over a set period, like the last 20 days. Think of it as the stock's 'normal' price - when current price is above SMA, it's running hot; below SMA means it's running cool.";
+    }
+
+    // RSI analysis questions (not educational)
+    if ((lowerMessage.includes('rsi') || lowerMessage.includes('relative strength')) && !lowerMessage.includes('what is') && !lowerMessage.includes("what's") && !lowerMessage.includes('explain') && !lowerMessage.includes('means')) {
       return `RSI (Relative Strength Index) measures momentum on a scale of 0-100. Above 70 suggests the stock${stockContext} might be overbought (due for a pullback), below 30 suggests oversold (potential buying opportunity), and 30-70 is the neutral zone with room to move either direction.`;
     }
 
