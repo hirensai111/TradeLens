@@ -4,39 +4,39 @@
 
 TradeLens is a comprehensive stock analysis platform that combines real-time market data, technical analysis, and AI-powered insights to democratize trading for everyone. Transform raw market data into actionable insights with our intuitive, professional-grade dashboard.
 
-## 🚀 Features
+## Features
 
-### 📊 Real-time Stock Analysis
+### Real-time Stock Analysis
 - Live market data with price movements, volume, and fundamentals
 - Interactive charts with multiple timeframes
 - Technical indicators (RSI, MACD, Moving Averages, Bollinger Bands)
 - Support and resistance level identification
 
-### 🤖 AI-Powered Trading Assistant
+### AI-Powered Trading Assistant
 - Integrated chatbot with contextual trading insights
 - Natural language queries ("What's the trend?", "Should I buy?")
 - Real-time analysis based on current market data
 - Educational support for complex financial concepts
 
-### 📈 Technical Analysis
+### Technical Analysis
 - **RSI (Relative Strength Index)**: Momentum oscillator for overbought/oversold conditions
 - **MACD**: Trend-following momentum indicator
 - **Moving Averages**: Support and resistance levels
 - **Volatility Analysis**: Risk assessment and position sizing guidance
 
-### 🎯 Smart Recommendations
+### Smart Recommendations
 - Buy/Sell/Hold recommendations with confidence levels
 - Risk analysis based on volatility and market conditions
 - Sector comparison and peer analysis
 - Price target suggestions
 
-### 📱 Modern UI/UX
+### Modern UI/UX
 - Dark theme optimized for trading
 - Responsive design for desktop and mobile
 - Real-time data updates
 - Intuitive navigation and clean interface
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **React 18** with TypeScript for type safety
@@ -57,14 +57,14 @@ TradeLens is a comprehensive stock analysis platform that combines real-time mar
 - Custom hybrid system combining data-driven and AI responses
 - Contextual awareness of current stock being analyzed
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Node.js** (v16 or higher)
 - **Python** (v3.8 or higher)
 - **npm** or **yarn**
 - **OpenAI API Key** (for AI assistant features)
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -101,7 +101,7 @@ npm start
 
 The frontend will run on `http://localhost:3000`
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 Create a `.env` file in the root directory:
@@ -133,7 +133,7 @@ print(f"Current Price: ${data['stock_data']['current_price']}")
 print(f"RSI: {data['technical_indicators']['rsi']['value']}")
 ```
 
-## 📊 Usage Examples
+## Usage Examples
 
 ### Basic Stock Analysis
 1. Enter a stock ticker (e.g., AAPL, MSFT, GOOGL)
@@ -155,7 +155,7 @@ print(f"RSI: {data['technical_indicators']['rsi']['value']}")
 - **MACD Signals**: Crossovers indicate potential trend changes
 - **Moving Averages**: Price above MA suggests uptrend, below suggests downtrend
 
-## 🎨 Screenshots
+## Screenshots
 
 ### Dashboard Overview
 ![Dashboard](docs/images/dashboard.png)
@@ -166,7 +166,7 @@ print(f"RSI: {data['technical_indicators']['rsi']['value']}")
 ### Technical Analysis
 ![Technical Analysis](docs/images/technical-analysis.png)
 
-## 🧪 API Testing
+## API Testing
 
 Test the backend API:
 
@@ -180,7 +180,7 @@ curl -X POST http://localhost:5000/api/chat \
   -d '{"message": "What is the trend?", "ticker": "AAPL"}'
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Backend Deployment (Heroku/AWS)
 ```bash
@@ -198,7 +198,7 @@ npm run build
 # Deploy the build folder
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -209,39 +209,19 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Yahoo Finance** for providing free stock market data
 - **OpenAI** for powering our AI assistant
 - **TA-Lib** for technical analysis calculations
 - **React & Flask communities** for excellent documentation
 
-## 🆘 Support
+## Support
 
-- 📧 **Email**: hirensai111@gmail.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/hirensai111/TradeLens/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/hirensai111/TradeLens/discussions)
-
-## 🗺️ Roadmap
-
-### Short-term (v1.1)
-- [ ] Portfolio tracking and watchlists
-- [ ] Price alerts and notifications
-- [ ] Mobile app development
-- [ ] Advanced charting tools
-
-### Long-term (v2.0)
-- [ ] Machine learning price predictions
-- [ ] Social trading features
-- [ ] Paper trading simulator
-- [ ] Options and derivatives analysis
-
----
-
-**Built with ❤️ by [Hiren Sai](https://github.com/hirensai111)**
-
-*Making professional-grade stock analysis accessible to everyone.*
+- **Email**: hirensai111@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/hirensai111/TradeLens/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/hirensai111/TradeLens/discussions)
