@@ -1,0 +1,20 @@
+{
+  "short_name": "TradeLens",
+  "name": "TradeLens - Easy market analysis for smarter decisions",
+  "icons": [
+    {
+      "src": "tradeLens.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "tradeLens.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00ff99",
+  "background_color": "#0b0e14"
+}
