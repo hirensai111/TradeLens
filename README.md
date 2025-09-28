@@ -1,6 +1,6 @@
 # TradeLens - Trading Simplified
 
-![TradeLens Logo](stock-dashboard-frontend/public/tradeLens.png)
+![TradeLens Thumbnail](screenshots/tradeLens_thumbnail.png)
 
 TradeLens is a comprehensive stock analysis platform that combines real-time market data, technical analysis, and AI-powered insights to democratize trading for everyone. Transform raw market data into actionable insights with our intuitive, professional-grade dashboard.
 
@@ -157,14 +157,17 @@ print(f"RSI: {data['technical_indicators']['rsi']['value']}")
 
 ## Screenshots
 
+### Landing Page
+![TradeLens Front Page](screenshots/tradeLens_FrontPage.png)
+
 ### Dashboard Overview
-![Dashboard](docs/images/dashboard.png)
+![TradeLens Dashboard](screenshots/tradeLens_Dashboard.png)
 
-### AI Assistant
-![Chat Assistant](docs/images/chat-assistant.png)
+### Stock Analysis & Chat Assistant
+![TradeLens Dashboard with Chat](screenshots/tradeLens_Dashboard2.png)
 
-### Technical Analysis
-![Technical Analysis](docs/images/technical-analysis.png)
+### Technical Indicators & Trading Signals
+![TradeLens Technical Analysis](screenshots/tradeLens_Dashboard3.png)
 
 ## API Testing
 
@@ -219,9 +222,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **OpenAI** for powering our AI assistant
 - **TA-Lib** for technical analysis calculations
 - **React & Flask communities** for excellent documentation
-
-## Support
-
-- **Email**: hirensai111@gmail.com
-- **Issues**: [GitHub Issues](https://github.com/hirensai111/TradeLens/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/hirensai111/TradeLens/discussions)
