@@ -1,0 +1,232 @@
+ULTIMATE ANALYSIS REPORT - AMD
+Generated: 2025-07-29 00:34:14
+Prediction Days: 5
+================================================================================
+
+
+🎯 ULTIMATE AI STOCK PREDICTION - AMD (5 Day Analysis + Options Trading)
+================================================================================
+Generated: 2025-07-29 00:34:12
+Analysis Type: Mathematical Computations + AI Reasoning + Multi-Source Data + Graph Analysis
+
+📊 MATHEMATICAL ANALYSIS FOUNDATION:
+──────────────────────────────────────────────────
+
+🏛️ MARKET REGIME ANALYSIS:
+  Detected Regime: Technical Breakout
+  Regime Confidence: 45.0%
+  Volatility Level: 41.7%
+  Trend Strength: 0.199
+  News Volume: 20 articles
+  Active Sources: 1
+  Graph Pattern Regime: Breakout Active
+  Graph Override Applied: ✅
+
+⚖️ ADAPTIVE WEIGHT SYSTEM:
+  Base Weights: Mom=0.29, Tech=0.64, News=0.32
+  Final Weights: Mom=0.33, Tech=0.40, News=0.24
+  Regime Adjustment: ✅ Applied
+  Graph Analysis Boost: ✅ Applied
+
+🔢 VOLATILITY & RISK METRICS:
+  Annualized Volatility: 41.67%
+  Daily Volatility: 2.625%
+  Risk Category: Moderate
+
+📈 MOMENTUM & STATISTICAL ANALYSIS:
+  30-day Return: 19.89%
+  Momentum Score: +0.017
+  Direction: Bullish
+  Graph Momentum Boost: +0.0000
+  Graph Acceleration: 0.725
+
+🎯 COMPOSITE SIGNALS:
+  Overall Signal: +0.170 (-1 to +1)
+  Signal Strength: 17%
+  Signal Direction: Bullish
+  Graph Signal Adjustment: +0.300
+
+📊 STATISTICAL PROJECTIONS:
+  Expected Return: +0.80%
+  Probability of Gain: 59%
+
+📊 ENHANCED CONFIDENCE METRICS:
+  Volatility-Aware Confidence: 45%
+  Volatility Tier: High
+  Monte Carlo Paths: 1,000
+  
+📈 PREDICTION QUALITY METRICS (Financial Standards):
+  Target MAE: < 3.3% of stock price
+  Actual MAE: 3.0%
+  MAE Success Rate: 100%
+  Time Horizon: 5 day(s) - Short-term
+
+📊 HISTORICAL CONTEXT (User Excel File):
+  Recent 30d performance: +19.89%
+  Historical volatility: 41.67%
+  Sector: Technology
+  Excel recommendation: Hold
+  Risk assessment: Moderate
+  📂 Excel file: AMD_analysis_report_20250728_223912.xlsx
+
+📈 CURRENT MARKET DATA (Alpha Vantage API):
+  Current Price: $166.47
+  Daily Change: +4.35 (+2.68%)
+  Trading Range: $162.36 - $167.18
+  Volume: 53,432,260 shares
+  Previous Close: $162.12
+
+📰 MULTI-SOURCE NEWS INTELLIGENCE:
+  Total Articles: 20 (from 1 sources)
+  Multi-Source Status: ✅ Active
+  Phase 3 Sentiment: +0.000
+  Aggregated Sentiment: +0.000
+  Confidence Score: 0.00
+  Event Impact: 0.00
+  Custom Articles: 0 user-provided
+  Major Catalysts: ❌ NO
+
+📅 MULTI-DAY PRICE PREDICTIONS (5 Days):
+──────────────────────────────────────────────────
+
+📊 MAE TUNING RESULTS:
+  Target MAE: < 3.3% (Volatility-Adjusted)
+  Monte Carlo: 1,000 paths
+  Volatility Tier: High
+    Day 1: $166.92 (+0.3%) 
+        Range: $160.91 - $172.43
+        MAE: 3.5% 🔴 Exceeds Target | Range Width: ±3.5%
+    Day 2: $167.47 (+0.6%) 
+        Range: $161.72 - $172.72
+        MAE: 3.3% 🔴 Exceeds Target | Range Width: ±3.3%
+    Day 3: $167.80 (+0.8%) 
+        Range: $162.32 - $172.79
+        MAE: 3.1% 🔴 Exceeds Target | Range Width: ±3.1%
+    Day 4: $168.32 (+1.1%) 
+        Range: $162.99 - $173.16
+        MAE: 3.0% 🔴 Exceeds Target | Range Width: ±3.0%
+    Day 5: $168.54 (+1.2%) 
+        Range: $163.31 - $173.27
+        MAE: 3.0% 🔴 Exceeds Target | Range Width: ±3.0%
+
+📊 MAE PERFORMANCE SUMMARY:
+    Average MAE: 3.2% 🔴 NEEDS TUNING
+    Target: < 2.5% per financial standards
+    Tuning Status: ⚠️ Requires further tuning
+
+🎯 5-DAY SUMMARY:
+Final Target Price: $168.54
+Total Expected Return: +0.8%
+Direction: UP
+Confidence: 45%
+Volatility Tier: High
+
+📈 OPTIONS TRADING ANALYSIS:
+──────────────────────────────────────────────────
+Input Options Analyzed: 2
+
+🎯 TOP OPTIONS RECOMMENDATIONS:
+    1. 🔴 AVOID CALL $175.0 (5d)
+       Confidence: 30% | Expected Return: -100.0%
+       Max Loss: $0.09 | Prob Profit: 57%
+       Risk/Reward: 0.0
+       Reasoning: Negative expected return (-100.0%)
+    2. 🔴 AVOID PUT $175.0 (5d)
+       Confidence: 30% | Expected Return: -24.0%
+       Max Loss: $8.51 | Prob Profit: 40%
+       Risk/Reward: 0.0
+       Reasoning: Negative expected return (-24.0%)
+
+🤖 CLAUDE AI ULTIMATE PREDICTION (Enhanced with Mathematical Foundation + Graph Analysis):
+  Mathematical Basis: ENHANCED with Graph Analysis: VOLATILITY-AWARE Monte Carlo with 1,000 paths, 91.7% drift, 41.7% volatility
+  Final Target Price (5d): $168.54
+  Expected Return: +0.80%
+  Direction: UP
+  Confidence: 45%
+  Upside Probability: 59%
+  Risk Level: MODERATE
+  Graph Integration: ✅ Applied
+  Primary Pattern: None
+  Breakout: ✅
+
+🎯 TRADING LEVELS & TARGETS:
+  5-Day Range: $163.31 - $173.27
+  Predicted Open: $166.92
+  Support Level: $161.48
+  Resistance Level: $171.46
+
+🔑 KEY FACTORS (AI-Identified):
+   • Volatility-aware confidence
+   • Dynamic Monte Carlo (1,000 paths)
+   • Signal-aware drift
+   • short-term analysis
+   • Graph technical patterns
+
+🧠 AI REASONING:
+  Volatility-aware analysis with high volatility tier adjustments, dynamic Monte Carlo simulation, and graph technical pattern integration
+
+📊 DATA INTEGRATION SUMMARY:
+  Excel Analysis: ✅ User Excel File
+  Mathematical Computations: ✅ Comprehensive quantitative analysis
+  Multi-Source News: ✅ 1 sources, 20 articles
+  Market Data: ✅ Alpha Vantage API
+  Multi-Day Analysis: ✅ 5 day forecast
+  Custom News: ✅ 0 breaking articles 
+  Options Analysis: ✅ Included
+  Graph Analysis: ✅ Applied
+  AI Analysis: ✅ Claude enhanced with volatility-aware confidence
+
+🎯 TRADING RECOMMENDATIONS:
+  Entry Signal: UP
+  Position Size: Standard (50%)
+  Stop Loss: $161.48 (-3.0%)
+  Take Profit: $171.46 (+3.0%)
+  
+  📈 TOP OPTIONS RECOMMENDATION:
+  - AVOID CALL $175 (5d)
+  - Confidence: 30% | Expected Return: -100.0%
+  - Max Risk: $0.09
+
+🔢 MATHEMATICAL FOUNDATION SUMMARY:
+  Overall Mathematical Signal: +0.170 (-1 to +1)
+  Risk-Adjusted Confidence: 45%
+  Volatility-Aware System: ✅ Applied
+  MAE Enforcement: ✅ Applied
+
+🎉 ULTIMATE PREDICTION SUMMARY:
+This represents the most comprehensive analysis possible, integrating:
+- Mathematical computations with volatility-aware confidence
+- Multi-day Monte Carlo price simulations (5 days, 1,000 paths)
+- User-selected Excel historical analysis
+- Multi-source news aggregation (1 sources)
+- User-provided breaking news with catalyst detection
+- Deep article content analysis for momentum indicators
+- Real-time/current market data
+- Advanced AI reasoning with quantitative foundation
+- Options trading analysis with Greeks and probability calculations
+
+Expected Price Movement: +0.80% over 5 day(s) (UP)
+Final Target (5d): $168.54
+Mathematical Confidence Level: 45% (Volatility-Adjusted)
+Options Recommendations: 2 strategies analyzed
+
+💡 DATA SOURCES & METHODOLOGY:
+  Historical: User Excel File
+  Market: Alpha Vantage API  
+  News Sources: 1 sources, 20 articles
+  Custom News: 0 articles 
+  Mathematical Analysis: ✅ Comprehensive with adaptive weights
+  Multi-Day Forecast: ✅ 5 day Monte Carlo simulation
+  Article Analysis: ✅ Deep content analysis for momentum indicators
+  30-day Performance: 19.89%
+  Options Analysis: ✅ Complete Greeks & probability analysis
+  Graph Analysis: ✅ Technical patterns & breakout detection
+  AI Enhancement: Claude with mathematical foundation, catalyst detection & volatility-aware confidence
+
+
+ENHANCEMENT SUMMARY:
+Excel File: AMD_analysis_report_20250728_223912.xlsx
+Graph Analysis: ✅ Applied
+Custom News: 0 articles
+Multi-source News: ✅
+Volatility-Aware: ✅

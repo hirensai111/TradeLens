@@ -1,0 +1,113 @@
+{
+  "date": "2025-08-12",
+  "market_data": {
+    "nifty_close": 24487.4,
+    "nifty_change": 0,
+    "banknifty_close": 55043.7,
+    "banknifty_change": 0,
+    "vix_close": 15.0,
+    "vix_change": 0.5
+  },
+  "bot_performance": {
+    "signals_sent_today": 10,
+    "high_confidence_signals": 3,
+    "scan_cycles_completed": 75,
+    "errors_today": 0,
+    "last_error": null,
+    "intraday_signals": 5,
+    "swing_signals": 0,
+    "api_issues": 0,
+    "analyzer_version": "Enhanced v4.0",
+    "automation_signals_sent": 5,
+    "automation_processing_rate": 0
+  },
+  "signals_detail": {
+    "date": "2025-08-12",
+    "signals_sent": 14,
+    "high_confidence_signals": 8,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "total_pnl": 0.0,
+    "best_trade": 0.0,
+    "worst_trade": 0.0,
+    "top_signals": [
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "MIDCPNIFTY",
+        "strategy": "LONG_PUT",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "MIDCPNIFTY",
+        "strategy": "LONG_PUT",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "MIDCPNIFTY",
+        "strategy": "LONG_PUT",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      }
+    ],
+    "top_patterns": [],
+    "learning_insights": {
+      "most_used_strategy": "TEST_STRATEGY",
+      "avg_confidence": 0.85
+    }
+  },
+  "active_positions": 5,
+  "api_provider": "Zerodha Kite Connect"
+}

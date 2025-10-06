@@ -1,0 +1,113 @@
+{
+  "date": "2025-09-02",
+  "market_data": {
+    "nifty_close": 24579.6,
+    "nifty_change": 0,
+    "banknifty_close": 53661,
+    "banknifty_change": 0,
+    "vix_close": 15.0,
+    "vix_change": 0.5
+  },
+  "bot_performance": {
+    "signals_sent_today": 8,
+    "high_confidence_signals": 4,
+    "scan_cycles_completed": 75,
+    "errors_today": 0,
+    "last_error": null,
+    "intraday_signals": 4,
+    "swing_signals": 0,
+    "api_issues": 0,
+    "analyzer_version": "Enhanced v4.0",
+    "automation_signals_sent": 4,
+    "automation_processing_rate": 0
+  },
+  "signals_detail": {
+    "date": "2025-09-02",
+    "signals_sent": 8,
+    "high_confidence_signals": 8,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "total_pnl": 0.0,
+    "best_trade": 0.0,
+    "worst_trade": 0.0,
+    "top_signals": [
+      {
+        "ticker": "TEST",
+        "strategy": "TEST_STRATEGY",
+        "confidence": 0.85,
+        "entry_price": 1000.0,
+        "status": "active"
+      },
+      {
+        "ticker": "RELIANCE",
+        "strategy": "BULL_CALL_SPREAD",
+        "confidence": 0.829,
+        "entry_price": 1381.9,
+        "status": "active"
+      },
+      {
+        "ticker": "RELIANCE",
+        "strategy": "BULL_CALL_SPREAD",
+        "confidence": 0.829,
+        "entry_price": 1381.9,
+        "status": "active"
+      },
+      {
+        "ticker": "RELIANCE",
+        "strategy": "BULL_CALL_SPREAD",
+        "confidence": 0.829,
+        "entry_price": 1381.9,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3125.4,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3125.4,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3125.4,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3134.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3134.0,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_CALL",
+        "confidence": 0.824,
+        "entry_price": 3134.0,
+        "status": "active"
+      }
+    ],
+    "top_patterns": [],
+    "learning_insights": {
+      "most_used_strategy": "LONG_CALL",
+      "avg_confidence": 0.828
+    }
+  },
+  "active_positions": 4,
+  "api_provider": "Zerodha Kite Connect"
+}

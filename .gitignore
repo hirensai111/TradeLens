@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+*.env
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+all_stocks_analysis.log
+
+# Cache
+cache/
+*.cache
+__pycache__/
+.pytest_cache/
+
+# Data
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Output
+output/
+*.xlsx
+*.csv
+nul
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build files
+stock_analyzer/stock-dashboard-frontend/build/
+stock_analyzer/stock-dashboard-frontend/.env
+
+# Test files
+test_files.txt
+regular_files.txt
+
+# Temporary files
+*.tmp
+*.temp
+.claude/
+
+# OS generated
+.DS_Store
+Thumbs.dbstock-prediction-engine/config/config.yaml
+stock-prediction-engine/config/sample_config.json

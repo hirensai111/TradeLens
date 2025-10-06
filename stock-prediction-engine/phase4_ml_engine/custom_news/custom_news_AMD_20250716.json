@@ -1,0 +1,25 @@
+[
+  {
+    "title": "AMD stock surged 7% after the U.S. Department of Commerce approved the resumptio...",
+    "content": "AMD stock surged 7% after the U.S. Department of Commerce approved the resumption of MI308X AI GPU shipments to China, reversing a decision that had previously threatened \\$1.5 billion in revenue. Although the GPU has lower margins than AMD\u2019s corporate average, the move is expected to positively impact the semiconductor sector. This comes amid a broader wave of AI investment, including \\$70 billion in U.S. data center and energy initiatives and major commitments from tech giants like Google (\\$25B), CoreWeave (\\$6B), Meta, and Oracle. Analysts at Citi view these developments as beneficial for companies like AMD, Broadcom, and Micron. Meanwhile, Google continues to expand its AI footprint through new product features, strategic hires, and acquisitions like AI coding startup Windsurf.",
+    "sentiment_score": 0.0,
+    "confidence": 0.9,
+    "source": "user_input",
+    "timestamp": "2025-07-16T16:30:32.037968",
+    "momentum_analysis": {
+      "momentum_score": 0,
+      "detected_patterns": [],
+      "momentum_direction": "neutral"
+    },
+    "catalyst_analysis": {
+      "catalyst_score": 0,
+      "detected_catalysts": [],
+      "has_financial_verb": false,
+      "catalyst_strength": "weak",
+      "has_major_catalyst": false,
+      "catalyst_types": [],
+      "catalyst_count": 0,
+      "impact_multiplier": 1.0
+    }
+  }
+]

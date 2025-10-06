@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeLens - Easy market analysis for smarter decisions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #0b0e14;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 2rem 1rem;
+            text-align: center;
+            background-color: #0b0e14;
+            border-bottom: 2px solid #2d3748;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-trade {
+            color: #00ff99;
+        }
+
+        .logo-lens {
+            color: white;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        /* Mode Selector */
+        .mode-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mode-btn {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background-color: #1a202c;
+            color: white;
+            border: 2px solid #2d3748;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mode-btn:hover {
+            border-color: #00ff99;
+            transform: translateY(-2px);
+        }
+
+        .mode-btn.active {
+            background-color: #00ff99;
+            color: #000000;
+            border-color: #00ff99;
+            box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .mode-content {
+            display: none;
+        }
+
+        .mode-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #1a202c;
+            border: 2px solid #2d3748;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Input Styles */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #d1d5db;
+            margin-bottom: 0.75rem;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            background-color: #0b0e14;
+            color: white;
+            border: 2px solid #2d3748;
+            transition: all 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #00ff99;
+            box-shadow: 0 0 0 2px rgba(0, 255, 153, 0.2);
+        }
+
+        .input-field::placeholder {
+            color: #6b7280;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            background-color: #00ff99;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 153, 0.3);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #00ff99, #00d4ff);
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 153, 0.4);
+        }
+
+        /* Stock Grid */
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .stock-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stock-card {
+            background-color: #1a202c;
+            border: 2px solid #2d3748;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .stock-card:hover {
+            border-color: #00ff99;
+        }
+
+        .stock-card:hover .stock-ticker {
+            color: #00ff99;
+        }
+
+        .stock-ticker {
+            font-weight: bold;
+            font-size: 1rem;
+            color: white;
+            transition: color 0.2s;
+        }
+
+        .stock-name {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+
+        /* Forecast Options */
+        .forecast-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .forecast-option {
+            flex: 1;
+            min-width: 120px;
+            padding: 1rem;
+            background-color: #1a202c;
+            border: 2px solid #2d3748;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .forecast-option:hover {
+            border-color: #00ff99;
+        }
+
+        .forecast-option.selected {
+            border-color: #00ff99;
+            background-color: rgba(0, 255, 153, 0.1);
+        }
+
+        .forecast-days {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff99;
+        }
+
+        .forecast-label {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-top-color: #000000;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Loading States */
+        .loading-container {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .loading-progress {
+            margin-top: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #2d3748;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff99, #00d4ff);
+            transition: width 0.3s ease;
+        }
+
+        .loading-stage {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        /* Report Styles */
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .report-header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 153, 0.1), rgba(0, 212, 255, 0.1));
+            border: 2px solid #00ff99;
+            margin-bottom: 2rem;
+        }
+
+        .report-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff99;
+            margin-bottom: 0.5rem;
+        }
+
+        .report-subtitle {
+            font-size: 1rem;
+            color: #9ca3af;
+        }
+
+        .report-section {
+            background-color: #1a202c;
+            border: 2px solid #2d3748;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #00ff99;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 0.5rem;
+        }
+
+        .prediction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .prediction-table th,
+        .prediction-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .prediction-table th {
+            background-color: #0b0e14;
+            color: #00ff99;
+            font-weight: 600;
+        }
+
+        .prediction-table td {
+            color: #d1d5db;
+        }
+
+        .metric-positive {
+            color: #00ff99;
+        }
+
+        .metric-negative {
+            color: #ff4757;
+        }
+
+        /* Coming Soon Styles */
+        .coming-soon {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .rocket-animation {
+            font-size: 6rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .coming-soon-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem;
+            background: linear-gradient(135deg, #00ff99, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .coming-soon-subtitle {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: #1a202c;
+            border: 2px solid #2d3748;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: #00ff99;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 255, 153, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: #1a202c;
+            color: white;
+            border: 2px solid #2d3748;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button:hover {
+            border-color: #00ff99;
+            color: #00ff99;
+        }
+
+        /* Hide class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .mode-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .forecast-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">
+            <span class="logo-trade">Trade</span><span class="logo-lens">Lens</span>
+        </h1>
+        <p class="tagline">Easy market analysis for smarter decisions</p>
+
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="analyze">Analyze</button>
+            <button class="mode-btn" data-mode="predict">Predict</button>
+            <button class="mode-btn" data-mode="trade">Trade</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- ANALYZE MODE -->
+        <div id="mode-analyze" class="mode-content active">
+            <div class="card">
+                <div class="input-group">
+                    <label class="input-label">Enter Stock Symbol</label>
+                    <input
+                        type="text"
+                        id="analyze-input"
+                        class="input-field"
+                        placeholder="e.g., AAPL, MSFT, GOOGL..."
+                        maxlength="10"
+                    >
+                </div>
+                <button id="analyze-btn" class="btn-primary">Analyze Stock</button>
+            </div>
+
+            <!-- Popular Stocks -->
+            <div>
+                <h3 class="section-title">Popular Stocks</h3>
+                <div class="stock-grid" id="popular-stocks">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- PREDICT MODE -->
+        <div id="mode-predict" class="mode-content">
+            <div id="predict-input-view">
+                <div class="card">
+                    <h2 class="section-title">AI Price Prediction</h2>
+
+                    <div class="input-group">
+                        <label class="input-label">Enter Stock Symbol</label>
+                        <input
+                            type="text"
+                            id="predict-input"
+                            class="input-field"
+                            placeholder="e.g., AAPL, MSFT, GOOGL..."
+                            maxlength="10"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Select Forecast Period</label>
+                        <div class="forecast-options">
+                            <div class="forecast-option selected" data-days="5">
+                                <div class="forecast-days">5</div>
+                                <div class="forecast-label">Days</div>
+                            </div>
+                            <div class="forecast-option" data-days="15">
+                                <div class="forecast-days">15</div>
+                                <div class="forecast-label">Days</div>
+                            </div>
+                            <div class="forecast-option" data-days="30">
+                                <div class="forecast-days">30</div>
+                                <div class="forecast-label">Days</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="predict-btn" class="btn-secondary">Generate Report</button>
+                </div>
+            </div>
+
+            <!-- Loading View -->
+            <div id="predict-loading-view" class="hidden">
+                <div class="loading-container">
+                    <h2 class="section-title">Generating Prediction Report</h2>
+                    <div class="loading-progress">
+                        <div class="progress-bar">
+                            <div id="predict-progress-fill" class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div id="predict-loading-stage" class="loading-stage">Initializing...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report View -->
+            <div id="predict-report-view" class="hidden">
+                <button class="back-button" id="predict-back-btn">← Back to Prediction</button>
+                <div class="report-container" id="prediction-report">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- TRADE MODE -->
+        <div id="mode-trade" class="mode-content">
+            <div class="coming-soon">
+                <div class="rocket-animation">🚀</div>
+                <h2 class="coming-soon-title">Trading Platform Coming Soon</h2>
+                <p class="coming-soon-subtitle">We're building something amazing for you!</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-title">Live Trading</div>
+                        <div class="feature-description">Execute trades in real-time with live market data</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-title">Auto Trading</div>
+                        <div class="feature-description">Set up automated trading strategies</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <div class="feature-title">Portfolio Tracking</div>
+                        <div class="feature-description">Monitor your investments in one place</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">Smart Orders</div>
+                        <div class="feature-description">Advanced order types for better control</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <div class="feature-title">Price Alerts</div>
+                        <div class="feature-description">Get notified of important price movements</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-title">Risk Management</div>
+                        <div class="feature-description">Protect your portfolio with smart limits</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Popular stocks data
+        const POPULAR_STOCKS = [
+            { ticker: 'AAPL', name: 'Apple Inc.' },
+            { ticker: 'MSFT', name: 'Microsoft Corp.' },
+            { ticker: 'GOOGL', name: 'Alphabet Inc.' },
+            { ticker: 'AMZN', name: 'Amazon.com Inc.' },
+            { ticker: 'TSLA', name: 'Tesla Inc.' },
+            { ticker: 'NVDA', name: 'NVIDIA Corp.' },
+            { ticker: 'META', name: 'Meta Platforms' },
+            { ticker: 'NFLX', name: 'Netflix Inc.' },
+        ];
+
+        // State
+        let currentMode = 'analyze';
+        let selectedForecastDays = 5;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initializePopularStocks();
+            initializeEventListeners();
+        });
+
+        // Initialize popular stocks
+        function initializePopularStocks() {
+            const container = document.getElementById('popular-stocks');
+            container.innerHTML = POPULAR_STOCKS.map(stock => `
+                <div class="stock-card" data-ticker="${stock.ticker}">
+                    <div class="stock-ticker">${stock.ticker}</div>
+                    <div class="stock-name">${stock.name}</div>
+                </div>
+            `).join('');
+
+            // Add click listeners
+            container.querySelectorAll('.stock-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const ticker = card.dataset.ticker;
+                    document.getElementById('analyze-input').value = ticker;
+                    handleAnalyze();
+                });
+            });
+        }
+
+        // Initialize event listeners
+        function initializeEventListeners() {
+            // Mode switching
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.addEventListener('click', () => switchMode(btn.dataset.mode));
+            });
+
+            // Analyze mode
+            document.getElementById('analyze-input').addEventListener('input', (e) => {
+                e.target.value = e.target.value.toUpperCase();
+            });
+            document.getElementById('analyze-input').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleAnalyze();
+            });
+            document.getElementById('analyze-btn').addEventListener('click', handleAnalyze);
+
+            // Predict mode
+            document.getElementById('predict-input').addEventListener('input', (e) => {
+                e.target.value = e.target.value.toUpperCase();
+            });
+            document.getElementById('predict-input').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handlePredict();
+            });
+            document.getElementById('predict-btn').addEventListener('click', handlePredict);
+            document.getElementById('predict-back-btn').addEventListener('click', resetPredictMode);
+
+            // Forecast options
+            document.querySelectorAll('.forecast-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    document.querySelectorAll('.forecast-option').forEach(o => o.classList.remove('selected'));
+                    option.classList.add('selected');
+                    selectedForecastDays = parseInt(option.dataset.days);
+                });
+            });
+        }
+
+        // Mode switching
+        function switchMode(mode) {
+            currentMode = mode;
+
+            // Update buttons
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.mode === mode);
+            });
+
+            // Update content
+            document.querySelectorAll('.mode-content').forEach(content => {
+                content.classList.toggle('active', content.id === `mode-${mode}`);
+            });
+        }
+
+        // Handle analyze
+        function handleAnalyze() {
+            const ticker = document.getElementById('analyze-input').value.trim();
+
+            if (!ticker) {
+                alert('Please enter a stock ticker symbol');
+                return;
+            }
+
+            if (ticker.length > 10 || !/^[A-Z]+$/.test(ticker)) {
+                alert('Invalid ticker symbol. Please use only letters (max 10 characters)');
+                return;
+            }
+
+            // Mock analysis
+            alert(`Analyzing ${ticker}...\n\nThis is a demo. In production, this would:\n• Fetch real-time data\n• Analyze technical indicators\n• Display comprehensive dashboard\n• Show price charts and predictions`);
+        }
+
+        // Handle predict
+        function handlePredict() {
+            const ticker = document.getElementById('predict-input').value.trim();
+
+            if (!ticker) {
+                alert('Please enter a stock ticker symbol');
+                return;
+            }
+
+            if (ticker.length > 10 || !/^[A-Z]+$/.test(ticker)) {
+                alert('Invalid ticker symbol. Please use only letters (max 10 characters)');
+                return;
+            }
+
+            // Show loading view
+            document.getElementById('predict-input-view').classList.add('hidden');
+            document.getElementById('predict-loading-view').classList.remove('hidden');
+
+            // Simulate loading with stages
+            const stages = [
+                { progress: 20, text: 'Fetching historical data...' },
+                { progress: 40, text: 'Running mathematical models...' },
+                { progress: 60, text: 'Training AI algorithms...' },
+                { progress: 80, text: 'Generating predictions...' },
+                { progress: 100, text: 'Finalizing report...' }
+            ];
+
+            let currentStage = 0;
+
+            const interval = setInterval(() => {
+                if (currentStage < stages.length) {
+                    const stage = stages[currentStage];
+                    document.getElementById('predict-progress-fill').style.width = `${stage.progress}%`;
+                    document.getElementById('predict-loading-stage').textContent = stage.text;
+                    currentStage++;
+                } else {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        showPredictionReport(ticker);
+                    }, 500);
+                }
+            }, 800);
+        }
+
+        // Show prediction report
+        function showPredictionReport(ticker) {
+            document.getElementById('predict-loading-view').classList.add('hidden');
+            document.getElementById('predict-report-view').classList.remove('hidden');
+
+            // Generate mock prediction data
+            const predictions = generateMockPredictions(ticker, selectedForecastDays);
+
+            const reportHTML = `
+                <div class="report-header">
+                    <div class="report-title">🎯 ULTIMATE AI PREDICTION</div>
+                    <div class="report-subtitle">${ticker} - ${selectedForecastDays} Day Forecast</div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">📊 Mathematical Analysis</div>
+                    <p style="color: #d1d5db; line-height: 1.6;">
+                        Our advanced AI models have analyzed ${predictions.dataPoints} historical data points using:
+                        <br>• LSTM Neural Networks (Accuracy: 87.3%)
+                        <br>• ARIMA Time Series (Accuracy: 84.1%)
+                        <br>• Random Forest Ensemble (Accuracy: 82.9%)
+                        <br>• Sentiment Analysis Integration
+                        <br><br>
+                        Combined Model Confidence: <span class="metric-positive">85.8%</span>
+                    </p>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">📈 Day-by-Day Predictions</div>
+                    <table class="prediction-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Predicted Price</th>
+                                <th>Change</th>
+                                <th>MAE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${predictions.days.map(day => `
+                                <tr>
+                                    <td>${day.date}</td>
+                                    <td>$${day.price.toFixed(2)}</td>
+                                    <td class="${day.change >= 0 ? 'metric-positive' : 'metric-negative'}">
+                                        ${day.change >= 0 ? '+' : ''}${day.change.toFixed(2)}%
+                                    </td>
+                                    <td>±$${day.mae.toFixed(2)}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">💡 Trading Recommendations</div>
+                    <div style="color: #d1d5db; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;"><strong style="color: #00ff99;">Overall Outlook:</strong> ${predictions.outlook}</p>
+
+                        <p style="margin-bottom: 0.5rem;"><strong style="color: #00ff99;">Key Levels:</strong></p>
+                        <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li>Target Price: <span class="metric-positive">$${predictions.targetPrice}</span></li>
+                            <li>Support Level: $${predictions.supportLevel}</li>
+                            <li>Resistance Level: $${predictions.resistanceLevel}</li>
+                        </ul>
+
+                        <p style="margin-bottom: 0.5rem;"><strong style="color: #00ff99;">Risk Assessment:</strong></p>
+                        <ul style="margin-left: 1.5rem;">
+                            <li>Volatility: ${predictions.volatility}</li>
+                            <li>Risk Level: ${predictions.riskLevel}</li>
+                            <li>Recommended Position Size: ${predictions.positionSize}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="report-section" style="background: linear-gradient(135deg, rgba(0, 255, 153, 0.05), rgba(0, 212, 255, 0.05));">
+                    <p style="color: #9ca3af; font-size: 0.875rem; text-align: center; margin: 0;">
+                        ⚠️ This is a demonstration report with mock data. Real predictions would use live market data and advanced AI models.
+                        <br>Always conduct your own research before making investment decisions.
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('prediction-report').innerHTML = reportHTML;
+        }
+
+        // Generate mock prediction data
+        function generateMockPredictions(ticker, days) {
+            const basePrice = 150 + Math.random() * 100;
+            const trend = Math.random() > 0.5 ? 1 : -1;
+            const volatility = 0.5 + Math.random() * 2;
+
+            const predictions = {
+                dataPoints: Math.floor(800 + Math.random() * 400),
+                days: [],
+                outlook: trend > 0 ? 'Bullish - Upward momentum expected' : 'Cautious - Potential downside risk',
+                targetPrice: (basePrice * (1 + trend * 0.05)).toFixed(2),
+                supportLevel: (basePrice * 0.95).toFixed(2),
+                resistanceLevel: (basePrice * 1.05).toFixed(2),
+                volatility: volatility > 1.5 ? 'High' : volatility > 1 ? 'Medium' : 'Low',
+                riskLevel: volatility > 1.5 ? 'High Risk' : volatility > 1 ? 'Moderate Risk' : 'Low Risk',
+                positionSize: volatility > 1.5 ? '1-2% of portfolio' : volatility > 1 ? '2-5% of portfolio' : '3-7% of portfolio'
+            };
+
+            let currentPrice = basePrice;
+            const today = new Date();
+
+            for (let i = 1; i <= days; i++) {
+                const date = new Date(today);
+                date.setDate(date.getDate() + i);
+
+                const dailyChange = (Math.random() - 0.45) * volatility * trend;
+                currentPrice *= (1 + dailyChange / 100);
+
+                predictions.days.push({
+                    date: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+                    price: currentPrice,
+                    change: ((currentPrice - basePrice) / basePrice * 100),
+                    mae: 1 + Math.random() * 3
+                });
+            }
+
+            return predictions;
+        }
+
+        // Reset predict mode
+        function resetPredictMode() {
+            document.getElementById('predict-report-view').classList.add('hidden');
+            document.getElementById('predict-input-view').classList.remove('hidden');
+            document.getElementById('predict-progress-fill').style.width = '0%';
+            document.getElementById('predict-loading-stage').textContent = 'Initializing...';
+        }
+    </script>
+</body>
+</html>

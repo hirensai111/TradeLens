@@ -1,0 +1,109 @@
+{
+  "start_time": "2025-08-14T07:52:42.835931",
+  "test_categories": {
+    "Component Tests": {
+      "success": false,
+      "tests_run": 9,
+      "failures": 1,
+      "errors": 5,
+      "duration": 0.021004676818847656,
+      "details": {
+        "failures": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 519, in test_06_learning_system\n    self.assertGreater(lifecycle_id, 0)\nAssertionError: -1 not greater than 0\n"
+        ],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 353, in test_02_dynamic_capital_manager\n    asyncio.run(self._test_capital_status_update(capital_manager))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 392, in test_03_intelligent_risk_manager\n    asyncio.run(self._test_position_health_analysis(risk_manager, test_position))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 422, in test_04_profit_optimizer\n    asyncio.run(self._test_profit_analysis(optimizer, test_position))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 457, in test_05_strategy_executor\n    asyncio.run(self._test_strategy_creation(executor))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 551, in test_07_signal_processor\n    asyncio.run(self._test_signal_processing(processor, signal))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    },
+    "Integration Tests": {
+      "success": false,
+      "tests_run": 6,
+      "failures": 0,
+      "errors": 5,
+      "duration": 0.06892800331115723,
+      "details": {
+        "failures": [],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 684, in test_11_signal_reception_workflow\n    asyncio.run(self._test_signal_reception_workflow(bot, signal_data))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 711, in test_12_enhanced_signal_processing_workflow\n    asyncio.run(self._test_enhanced_processing(bot, signal))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 737, in test_13_position_management_workflow\n    asyncio.run(self._test_position_management(bot, position))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 763, in test_14_command_interface\n    asyncio.run(self._test_command_interface(command_interface))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 800, in test_15_exit_workflow\n    asyncio.run(self._test_exit_workflow(bot, position))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    },
+    "System Tests": {
+      "success": false,
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 2,
+      "duration": 0.01976609230041504,
+      "details": {
+        "failures": [],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 827, in test_16_full_system_diagnostics\n    asyncio.run(self._test_system_diagnostics(bot))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n",
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 854, in test_17_stress_testing\n    asyncio.run(self._test_rapid_signals(bot))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    },
+    "Performance Tests": {
+      "success": false,
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "duration": 0.014899730682373047,
+      "details": {
+        "failures": [],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 945, in test_18_performance_benchmarks\n    asyncio.run(self._test_processing_speed(bot))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    },
+    "Edge Case Tests": {
+      "success": false,
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "duration": 0.01381230354309082,
+      "details": {
+        "failures": [],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 1047, in test_19_edge_cases\n    asyncio.run(self._test_extreme_conditions(bot))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    },
+    "Security Tests": {
+      "success": false,
+      "tests_run": 1,
+      "failures": 0,
+      "errors": 1,
+      "duration": 0.024511098861694336,
+      "details": {
+        "failures": [],
+        "errors": [
+          "Traceback (most recent call last):\n  File \"D:\\stock-prediction-engine\\phase4_ml_engine\\test_automation.py\", line 1149, in test_20_security_validations\n    asyncio.run(self._test_data_validation(bot))\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\asyncio\\runners.py\", line 186, in run\n    raise RuntimeError(\nRuntimeError: asyncio.run() cannot be called from a running event loop\n"
+        ]
+      }
+    }
+  },
+  "overall_results": {
+    "success": false,
+    "end_time": "2025-08-14 07:52:43.000850",
+    "total_duration": "0:00:00.164919"
+  },
+  "performance_metrics": {},
+  "recommendations": [
+    "\ud83d\udd27 Review component tests - core functionality issues detected",
+    "\ud83d\udd17 Fix integration tests - component interaction problems",
+    "\u26a1 Optimize performance tests - performance issues found",
+    "\ud83d\udd10 Address security tests - security vulnerabilities detected",
+    "\u26a0\ufe0f Fix failing tests before production deployment"
+  ],
+  "end_time": "2025-08-14T07:52:43.000850",
+  "total_duration": "0:00:00.164919"
+}

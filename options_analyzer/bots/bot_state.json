@@ -1,0 +1,8 @@
+{
+  "shutdown_time": "2025-10-01T11:18:32.846263+05:30",
+  "active_positions": [
+    {
+      "ticker": "TCS",
+      "strategy": "LONG_PUT",
+      "confidence": 0.824,
+      "entry_time": 

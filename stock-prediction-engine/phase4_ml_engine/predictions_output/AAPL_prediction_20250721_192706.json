@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "ticker": "AAPL",
+    "timestamp": "20250721_192706",
+    "prediction_engine_version": "MAE_ENHANCED_v1.0",
+    "excel_file_path": "D:\\stock_analyzer\\output\\AAPL_analysis_report_20250721_191911.xlsx",
+    "mae_system_enabled": true
+  },
+  "claude_analysis": {
+    "predictions_by_day": [
+      {
+        "day": 1,
+        "predicted_open": 211.4,
+        "predicted_high": 216.06,
+        "predicted_low": 206.75,
+        "predicted_close": 211.4
+      }
+    ],
+    "final_target_price": 211.4,
+    "total_expected_return_pct": 0.05,
+    "confidence": 0.6,
+    "direction": "sideways",
+    "probability_up": 0.514,
+    "volatility_forecast": 0.24,
+    "signal_strength": "weak",
+    "volatility_tier": "Medium",
+    "volatility_adjusted_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "fresh_articles_count": 2,
+    "options_sentiment": "neutral",
+    "key_factors": [
+      "Volatility-aware confidence",
+      "Dynamic Monte Carlo (1,000 paths)",
+      "Signal-aware drift",
+      "short-term analysis"
+    ],
+    "risk_assessment": "low",
+    "mathematical_basis": "VOLATILITY-AWARE Monte Carlo with 1,000 paths, 48.0% drift, 24.0% volatility",
+    "reasoning": "Volatility-aware analysis with medium volatility tier adjustments and dynamic Monte Carlo simulation",
+    "mathematical_analysis": {
+      "bias_calibration": {
+        "base_signal": 0.15000000000000002,
+        "recent_5d_return_pct": 0.00361297152246341,
+        "news_momentum_score": 0.22400000000000003,
+        "total_catalyst_score": 0.6,
+        "enhanced_signal": 0.18361083891456742,
+        "calibrated_signal": 0.18361083891456742,
+        "strong_bullish_override": false,
+        "very_strong_bullish_override": false,
+        "strong_bearish_override": false,
+        "catalyst_boost_applied": false,
+        "technical_alignment_boost": false,
+        "signal_amplification_applied": false
+      },
+      "momentum_metrics": {
+        "thirty_day_return": 9.258315585877174,
+        "annualized_return": 189.37033666394396,
+        "momentum_score": 0.007715262988230978,
+        "adjusted_momentum": 0.006172210390584782,
+        "momentum_decay_factor": 0.8,
+        "scaled_momentum": 0.006172210390584782,
+        "momentum_direction": "Bullish"
+      },
+      "technical_signals": {
+        "rsi_value": 69.47707627839372,
+        "rsi_signal": 0.5,
+        "trend_signal": 0.7,
+        "trend_acceleration": 0.5,
+        "short_term_trend": 0.014566556774106402,
+        "price_vs_sma20": 1.4566556774106403
+      },
+      "news_analysis": {
+        "average_sentiment": 0.2,
+        "catalyst_boost": 0,
+        "impact_score": 0.06,
+        "has_catalysts": false,
+        "total_news_articles": 5
+      },
+      "composite_scores": {
+        "overall_signal": 0.020395399472984185,
+        "calibrated_signal_used": false,
+        "momentum_component": 0.001814996520795723,
+        "technical_component": 0.079009900990099,
+        "news_component": 0.015683168316831683,
+        "volatility_component": -0.07384651085774398,
+        "raw_signal": 0.022661554969982428,
+        "signal_override_protection": 0.9,
+        "drift_confidence": 0.4,
+        "drift_reduction": 0.9,
+        "signal_strength": 0.020395399472984185,
+        "signal_direction": "Neutral",
+        "prediction_timeframe": "short",
+        "bearish_protection_applied": false,
+        "context_aware_adjustment": true,
+        "momentum_amplification_applied": false,
+        "regime_adaptive_weights": true,
+        "momentum_override": "neutral",
+        "momentum_override_applied": false,
+        "drift_boost_applied": false,
+        "momentum_strength_pct": 9.258315585877174
+      },
+      "statistical_metrics": {
+        "expected_final_price": 211.28517164527923,
+        "raw_expected_return_pct": 0.10641430901415057,
+        "expected_return_pct": 0.049801896618622464,
+        "drift_adjustment_applied": "False",
+        "probability_of_gain": 0.514,
+        "value_at_risk_5pct": 206.27824834233473,
+        "value_at_risk_95pct": 217.05088417779348,
+        "confidence_factor": 0.52,
+        "momentum_boost_applied": false,
+        "bearish_cap_applied": "False",
+        "mae_enforced_price_used": true,
+        "mae_performance": {
+          "final_day_mae": 2.2000000000000046,
+          "mae_target": 2.1999999999999997,
+          "mae_target_met": "True",
+          "volatility_tier": "medium",
+          "avg_mae_all_days": 2.2000000000000046,
+          "mae_success_rate": 1.0,
+          "avg_range_tightening": 99.09117919505196,
+          "mae_enforcement_applied": true
+        },
+        "daily_stats_with_mae": [
+          {
+            "day": 1,
+            "mean_price": 211.4047257377761,
+            "median_price": 211.29714526670563,
+            "std_price": 3.2201466861661574,
+            "min_price": 206.753821771545,
+            "max_price": 216.05562970400717,
+            "percentile_5": 206.27824834233473,
+            "percentile_25": 209.2654144244727,
+            "percentile_75": 213.51499105314315,
+            "percentile_95": 217.05088417779348,
+            "prob_above_current": 0.514,
+            "expected_return": 0.0010641430901415056,
+            "mae_percent": 2.2000000000000046,
+            "mae_target": 2.1999999999999997,
+            "mae_quality": "Good",
+            "mae_target_met": "True",
+            "volatility_tier": "medium",
+            "range_width_pct": 4.400000000000009,
+            "range_tightening_applied": 99.09117919505196,
+            "mae_enforcement_applied": true,
+            "enhanced_calibration_applied": true,
+            "range_calibration_results": {
+              "mae_target_pct": 2.1999999999999997,
+              "final_mae_pct": 2.2000000000000046,
+              "mae_target_met": "True",
+              "volatility_tier": "medium",
+              "compression_applied": {
+                "initial_mae": 2.420719230922285,
+                "target_mae": 0.022,
+                "mae_compression": 0.009088208049480436,
+                "day_compression": 1.0,
+                "total_compression": 0.009088208049480436,
+                "final_mae": 0.022,
+                "mae_target_met": "True"
+              },
+              "base_range_pct": 241.8719230922285,
+              "base_multiplier": 1.6,
+              "time_expansion": 1.0,
+              "volatility_buffer_pct": 0.2,
+              "initial_range_pct": 242.0719230922285,
+              "final_range_pct": 2.1999999999999997,
+              "range_width": 9.301807932462168,
+              "is_tech_stock": false,
+              "enhanced_protection_applied": "False",
+              "mae_improvement": 99.09117919505196,
+              "range_tightening_pct": 99.09117919505196
+            },
+            "base_multiplier_used": 1.6,
+            "compression_factor": 0.009088208049480436
+          }
+        ]
+      },
+      "volatility_metrics": {
+        "annualized_volatility": 23.997485911161654,
+        "daily_volatility": 1.5116995193264282,
+        "volatility_category": "Low"
+      },
+      "enhanced_confidence": 0.6,
+      "confidence_breakdown": {
+        "volatility_tier": "Medium",
+        "vol_predictability_factor": 1.0,
+        "confidence_range": [
+          60,
+          88
+        ],
+        "signal_component": 2.855355926217786,
+        "news_component": 32.5,
+        "drift_component": 25.0,
+        "volatility_penalty": 2.3997485911161656,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.5,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.5,
+        "base_confidence": 60.85535592621778,
+        "preliminary_confidence": 60,
+        "final_confidence": 0.6,
+        "signal_boost_applied": "False",
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.020395399472984185,
+          "volatility_impact": -2.3997485911161656,
+          "data_quality_impact": 0.5,
+          "time_impact": 0
+        }
+      },
+      "volatility_aware_confidence": true,
+      "regime_analysis": {
+        "main_regime": "technical_trending",
+        "factors": {
+          "volatility": "medium",
+          "trend_strength": "weak",
+          "news_volume": "medium",
+          "technical_alignment": "bullish_aligned",
+          "news_quality": "limited"
+        },
+        "volatility_level": 23.997485911161654,
+        "trend_strength": 0.09258315585877173,
+        "news_volume": 5,
+        "active_sources": 1,
+        "regime_confidence": 0.6
+      },
+      "adaptive_weights": {
+        "momentum": 0.29405940594059404,
+        "technical": 0.39504950495049507,
+        "news": 0.2613861386138614,
+        "volatility": 0.04950495049504951
+      },
+      "final_weights": {
+        "momentum": 0.29405940594059404,
+        "technical": 0.39504950495049507,
+        "news": 0.2613861386138614,
+        "volatility": 0.04950495049504951
+      },
+      "monte_carlo_metadata": {
+        "path_count": 1000,
+        "volatility_tier": "Medium",
+        "data_quality_bonus": 0.5,
+        "volatility_penalty": 2.3997485911161656
+      }
+    },
+    "monte_carlo_stats": [
+      {
+        "day": 1,
+        "mean_price": 211.4047257377761,
+        "median_price": 211.29714526670563,
+        "std_price": 3.2201466861661574,
+        "min_price": 206.753821771545,
+        "max_price": 216.05562970400717,
+        "percentile_5": 206.27824834233473,
+        "percentile_25": 209.2654144244727,
+        "percentile_75": 213.51499105314315,
+        "percentile_95": 217.05088417779348,
+        "prob_above_current": 0.514,
+        "expected_return": 0.0010641430901415056,
+        "mae_percent": 2.2000000000000046,
+        "mae_target": 2.1999999999999997,
+        "mae_quality": "Good",
+        "mae_target_met": "True",
+        "volatility_tier": "medium",
+        "range_width_pct": 4.400000000000009,
+        "range_tightening_applied": 99.09117919505196,
+        "mae_enforcement_applied": true,
+        "enhanced_calibration_applied": true,
+        "range_calibration_results": {
+          "mae_target_pct": 2.1999999999999997,
+          "final_mae_pct": 2.2000000000000046,
+          "mae_target_met": "True",
+          "volatility_tier": "medium",
+          "compression_applied": {
+            "initial_mae": 2.420719230922285,
+            "target_mae": 0.022,
+            "mae_compression": 0.009088208049480436,
+            "day_compression": 1.0,
+            "total_compression": 0.009088208049480436,
+            "final_mae": 0.022,
+            "mae_target_met": "True"
+          },
+          "base_range_pct": 241.8719230922285,
+          "base_multiplier": 1.6,
+          "time_expansion": 1.0,
+          "volatility_buffer_pct": 0.2,
+          "initial_range_pct": 242.0719230922285,
+          "final_range_pct": 2.1999999999999997,
+          "range_width": 9.301807932462168,
+          "is_tech_stock": true,
+          "enhanced_protection_applied": "False",
+          "mae_improvement": 99.09117919505196,
+          "range_tightening_pct": 99.09117919505196
+        },
+        "base_multiplier_used": 1.6,
+        "compression_factor": 0.009088208049480436
+      }
+    ],
+    "options_analysis": null,
+    "fresh_search_integration": true,
+    "volatility_aware_system": true,
+    "fresh_search_metadata": {
+      "performed": true,
+      "articles_found": 2,
+      "sentiment_score": 0.20416384902559281,
+      "signal_strength": 0.1163733939445879,
+      "prediction_ready": false,
+      "quality_score": 0.6333333333333333
+    },
+    "prediction_metadata": {
+      "timeframe": "short",
+      "signal_strength": 0.020395399472984185,
+      "enhanced_confidence": 0.6,
+      "volatility_aware_confidence": true,
+      "volatility_tier": "Medium",
+      "monte_carlo_paths": 1000,
+      "confidence_breakdown": {
+        "volatility_tier": "Medium",
+        "vol_predictability_factor": 1.0,
+        "confidence_range": [
+          60,
+          88
+        ],
+        "signal_component": 2.855355926217786,
+        "news_component": 32.5,
+        "drift_component": 25.0,
+        "volatility_penalty": 2.3997485911161656,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.5,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.5,
+        "base_confidence": 60.85535592621778,
+        "preliminary_confidence": 60,
+        "final_confidence": 0.6,
+        "signal_boost_applied": "False",
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.020395399472984185,
+          "volatility_impact": -2.3997485911161656,
+          "data_quality_impact": 0.5,
+          "time_impact": 0
+        }
+      },
+      "bearish_protection": false,
+      "drift_adjusted": "False"
+    },
+    "volatility_analysis": {
+      "volatility_percentage": 23.997485911161654,
+      "volatility_tier": "Medium",
+      "volatility_penalty": 2.3997485911161656,
+      "data_quality_bonus": 0.5,
+      "monte_carlo_path_count": 1000,
+      "confidence_range": [
+        60,
+        88
+      ],
+      "predictability_factor": 1.0
+    }
+  },
+  "excel_data": {
+    "volatility": 23.997485911161654,
+    "calculated_volatility": 23.997485911161654,
+    "annualized_volatility": 23.997485911161654,
+    "avg_daily_change": 0.0007225943044926821,
+    "max_gain": 0.1532884728725123,
+    "max_loss": -0.09245607865732186,
+    "positive_days_pct": 52.93644408688657,
+    "recent_high": 216.2299957275391,
+    "recent_low": 192.9969099105543,
+    "sma_20": 208.1480003356934,
+    "sma_50": 204.710827331543,
+    "sma_200": 221.9073080444336,
+    "current_rsi": 69.47707627839372,
+    "macd": 2.48480201985663,
+    "macd_signal": 2.161156164834948,
+    "atr": 3.752500261579241,
+    "excel_overall_signal": "Neutral",
+    "excel_trend": "Bearish",
+    "excel_momentum": "Neutral",
+    "performance_return_1_month": 9.258315585877174,
+    "30d_return": 9.258315585877174,
+    "recent_30d_return": 9.258315585877174,
+    "sector": "Technology",
+    "excel_recommendation": "Hold",
+    "excel_risk_level": "Moderate"
+  },
+  "news_data": {
+    "sentiment_1d": 0.20416384902559281,
+    "sentiment_7d": 0.12666666666666668,
+    "news_volume_1d": 27,
+    "news_volume_7d": 22,
+    "confidence_score": 0.95,
+    "source_diversity": 2,
+    "event_impact_score": 0.07800000000000001,
+    "recent_events": [
+      {
+        "title": "[CUSTOM] Analyst sentiment remains constructively divided...",
+        "sentiment": 0.0,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      },
+      {
+        "title": "[CUSTOM] Corporate transformation accelerates under pressure...",
+        "sentiment": 0.0,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      },
+      {
+        "title": "[CUSTOM] Investment outlook balances risk and opportunity...",
+        "sentiment": 0.0,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      }
+    ],
+    "multi_source_enabled": true,
+    "active_sources": 2,
+    "total_articles": 27,
+    "source_breakdown": {
+      "phase3": {
+        "sentiment": 0.12666666666666668,
+        "articles": 2,
+        "confidence": 0.0
+      },
+      "alpha_vantage": {
+        "sentiment": 0.18642517700390904,
+        "articles": 20,
+        "confidence": 0.9,
+        "source": "alpha_vantage"
+      },
+      "finnhub": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "newsapi": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      }
+    },
+    "aggregated_sentiment": 0.16107308170932136,
+    "aggregate_confidence": 0.8,
+    "fresh_search_performed": true,
+    "fresh_articles_found": 2,
+    "prediction_ready": false,
+    "phase3_sentiment": 0.12666666666666668,
+    "signal_strength": 0.1163733939445879,
+    "signal_direction": 0.20416384902559281,
+    "quality_score": 0.6333333333333333,
+    "news_price_correlation": 0.0,
+    "custom_impact_score": 0.26880000000000004,
+    "momentum_direction": "Bullish",
+    "has_major_catalyst": false,
+    "total_catalyst_count": 0,
+    "custom_articles_count": 5,
+    "custom_sentiment_impact": 0.26880000000000004,
+    "catalyst_types": [],
+    "catalyst_impact_level": "none"
+  },
+  "market_data": {
+    "current_price": 211.18,
+    "open": 210.87,
+    "high": 211.79,
+    "low": 209.7045,
+    "volume": 48974591,
+    "change": 1.16,
+    "change_percent": 0.5523,
+    "previous_close": 210.02,
+    "current_rsi": 50.0,
+    "av_news_sentiment": 0.0,
+    "av_news_count": 0,
+    "data_source": "alpha_vantage"
+  },
+  "custom_articles": [
+    {
+      "title": "Apple stock faces critical week ahead...",
+      "content": "Apple stock faces critical week ahead\nApple stock enters the week of July 21 trading at $211 amid mounting pressures from regulatory challenges, supply chain disruptions, and delayed AI rollout, yet analysts maintain cautiously optimistic outlooks driven by expectations of an AI-powered iPhone upgrade cycle. Despite being the worst-performing Magnificent 7 stock with an 18% year-to-date decline, Yahoo Finance the tech giant shows resilience through strategic supply chain diversification and strong Services segment growth, positioning itself for potential recovery as it approaches crucial third-quarter earnings on July 31.\nThe convergence of Federal Reserve policy decisions, major corporate transitions, and competitive AI developments creates a high-stakes environment for Apple investors this week, with multiple catalysts capable of driving significant stock price movements.",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:21:39.291798",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Market position reflects mounting challenges...",
+      "content": "Market position reflects mounting challenges\nApple's current trading price of $211.18 Yahoo Finance places it near the middle of a consolidation range between $200-220, MSN representing a dramatic retreat from its December 2024 all-time high of $260.10. StockInvest.us +2 The stock's 18% year-to-date decline makes it the second-worst performer among the Magnificent 7 technology stocks, trailing only Tesla in negative performance. Yahoo Finance\nTechnical indicators present a mixed but cautiously optimistic picture. The Relative Strength Index sits in neutral territory at approximately 55, Investing.com while multiple moving averages provide support levels. Key resistance awaits at $213, where a breakout could target the $216-224 gap fill area. Critical support lies at $205-208, SwingTradeBot with the horizontal trend floor at $200.15 representing a make-or-break level for near-term momentum. StockInvest.us\nTrading volume at 49 million shares remains below the 53 million average, FinanceChartsMSN suggesting reduced institutional conviction during the current consolidation phase. Yahoo Finance Options activity reveals heightened interest, with 146 unusual trades recently identified and a mixed sentiment of 45% bullish versus 39% bearish among large traders. NasdaqBenzinga",
+      "sentiment_score": 1,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:22:01.085809",
+      "momentum_analysis": {
+        "momentum_score": 1.2,
+        "detected_patterns": [
+          "breakout",
+          "all-time high"
+        ],
+        "momentum_direction": "bullish"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Analyst sentiment remains constructively divided...",
+      "content": "Analyst sentiment remains constructively divided\nWall Street's assessment of Apple reflects the stock's complex fundamental picture. JPMorgan's Samik Chatterjee recently raised his price target from $230 to $250, CNN citing expectations for an \"AI and age of installed base led volume replacement cycle while Services continues robust growth.\" Yahoo Finance +2 This reversal from his June downgrade demonstrates evolving analyst confidence in Apple's strategic direction.\nWedbush's Dan Ives maintains his extremely bullish stance with price targets ranging $300-325, forecasting Apple could sell 240+ million iPhones in fiscal 2025 and become the first $4 trillion company. Ives estimates 300 million iPhones globally are ready for upgrades, representing a massive installed base opportunity. Yahoo Finance +2\nHowever, skepticism persists. Jefferies upgraded to Hold from Underperform but maintains a bearish $188 price target, representing 11% downside from current levels. Benzinga The consensus across 46 analysts shows 26 Buy ratings, 17 Holds, and 3 Sells, with average price targets suggesting 8-12% upside potential. StockAnalysisInvesting.com",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:22:18.364238",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Corporate transformation accelerates under pressure...",
+      "content": "Corporate transformation accelerates under pressure\nApple's most significant leadership transition in years unfolds this week as Sabih Khan assumes the Chief Operating Officer role from 27-year veteran Jeff Williams. Khan's 30-year tenure at Apple and six years leading global supply chain operations apple positions him uniquely to navigate the company's manufacturing challenges.\nThis transition coincides with Apple's $500 million commitment to MP Materials for American-made rare earth magnets, representing the company's largest domestic supply chain investment. The partnership establishes manufacturing facilities in Fort Worth, Texas, and recycling operations in Mountain Pass, California, appleCNN directly addressing dependency on Chinese materials amid escalating trade tensions. PressReleasePoint\niOS 26 public beta launches Wednesday, July 23, featuring the revolutionary \"Liquid Glass\" design overhaul\u2014the most significant visual transformation since iOS 7 in 2013. MacRumors +4 This software milestone demonstrates Apple's continued innovation leadership despite AI implementation delays that have created competitive disadvantages against Samsung and Google offerings.",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:22:53.145542",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Investment outlook balances risk and opportunity...",
+      "content": "Investment outlook balances risk and opportunity\nApple stock presents a compelling risk-reward proposition at current levels. The company's fundamental strengths\u2014including a massive installed base of 300+ million devices ready for upgrades, accelerating Services revenue, and successful supply chain diversification\u2014provide substantial downside protection around the $200 level. Yahoo Finance\nHowever, multiple headwinds demand investor caution. Tariff-driven margin pressure could force difficult pricing decisions, regulatory outcomes remain uncertain, and AI competitive positioning needs improvement. The stock's technical consolidation pattern suggests range-bound trading between $200-220 until major catalysts provide directional clarity. StockInvest.us",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:23:10.744436",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    }
+  ],
+  "mae_performance": {
+    "system_enabled": true,
+    "final_day_mae": 2.2000000000000046,
+    "mae_target": 2.1999999999999997,
+    "mae_success_rate": 1.0,
+    "volatility_tier": "Medium",
+    "range_tightening_applied": 99.09117919505196
+  },
+  "analysis_metadata": {
+    "volatility_aware_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "regime_adaptive_weights": true
+  },
+  "options_analysis": null,
+  "quality_metrics": {
+    "prediction_confidence": 0.6,
+    "signal_strength": 0.020395399472984185,
+    "volatility_adjusted_confidence": true
+  }
+}

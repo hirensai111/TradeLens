@@ -1,0 +1,649 @@
+{
+  "metadata": {
+    "ticker": "AMD",
+    "timestamp": "20250721_194034",
+    "prediction_engine_version": "MAE_ENHANCED_v1.0",
+    "excel_file_path": "D:\\stock_analyzer\\output\\AMD_analysis_report_20250721_192359.xlsx",
+    "mae_system_enabled": true
+  },
+  "claude_analysis": {
+    "predictions_by_day": [
+      {
+        "day": 1,
+        "predicted_open": 157.09,
+        "predicted_high": 162.27,
+        "predicted_low": 151.44,
+        "predicted_close": 157.09
+      }
+    ],
+    "final_target_price": 157.09,
+    "total_expected_return_pct": 0.04,
+    "confidence": 0.709,
+    "direction": "sideways",
+    "probability_up": 0.517,
+    "volatility_forecast": 0.41,
+    "signal_strength": "moderate",
+    "volatility_tier": "High",
+    "volatility_adjusted_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "fresh_articles_count": 1,
+    "options_sentiment": "bullish",
+    "key_factors": [
+      "Volatility-aware confidence",
+      "Dynamic Monte Carlo (1,000 paths)",
+      "Signal-aware drift",
+      "short-term analysis"
+    ],
+    "risk_assessment": "moderate",
+    "mathematical_basis": "VOLATILITY-AWARE Monte Carlo with 1,000 paths, 90.3% drift, 41.0% volatility",
+    "reasoning": "Volatility-aware analysis with high volatility tier adjustments and dynamic Monte Carlo simulation",
+    "mathematical_analysis": {
+      "bias_calibration": {
+        "base_signal": 0.18716397313406632,
+        "recent_5d_return_pct": 0.005041454573024824,
+        "news_momentum_score": 0.35333333333333333,
+        "total_catalyst_score": 0.3,
+        "enhanced_signal": 0.2401790974977854,
+        "calibrated_signal": 0.2401790974977854,
+        "strong_bullish_override": true,
+        "very_strong_bullish_override": false,
+        "strong_bearish_override": false,
+        "catalyst_boost_applied": false,
+        "technical_alignment_boost": true,
+        "signal_amplification_applied": false
+      },
+      "momentum_metrics": {
+        "thirty_day_return": 24.75557686231329,
+        "annualized_return": 1321.410843920002,
+        "momentum_score": 0.020629647385261077,
+        "adjusted_momentum": 0.016503717908208863,
+        "momentum_decay_factor": 0.8,
+        "scaled_momentum": 0.016503717908208863,
+        "momentum_direction": "Bullish"
+      },
+      "technical_signals": {
+        "rsi_value": 69.15121461509213,
+        "rsi_signal": 0.5,
+        "trend_signal": 0.7,
+        "trend_acceleration": 0.6,
+        "short_term_trend": 0.08551288287447756,
+        "price_vs_sma20": 8.551288287447756
+      },
+      "news_analysis": {
+        "average_sentiment": 0.3333333333333333,
+        "catalyst_boost": 0,
+        "impact_score": 0.09999999999999999,
+        "has_catalysts": false,
+        "total_news_articles": 6
+      },
+      "composite_scores": {
+        "overall_signal": 0.2401790974977854,
+        "calibrated_signal_used": true,
+        "momentum_component": 0.0065632157263117025,
+        "technical_component": 0.08956468673718465,
+        "news_component": 0.025856613326100716,
+        "volatility_component": -0.11594786129982923,
+        "raw_signal": 0.00603665448976784,
+        "signal_override_protection": 0.9,
+        "drift_confidence": 0.6,
+        "drift_reduction": 1.0,
+        "signal_strength": 0.2401790974977854,
+        "signal_direction": "Bullish",
+        "prediction_timeframe": "short",
+        "bearish_protection_applied": false,
+        "context_aware_adjustment": true,
+        "momentum_amplification_applied": "False",
+        "regime_adaptive_weights": true,
+        "momentum_override": "very_strong_bullish",
+        "momentum_override_applied": true,
+        "drift_boost_applied": false,
+        "momentum_strength_pct": 24.75557686231329
+      },
+      "statistical_metrics": {
+        "expected_final_price": 157.05615625107345,
+        "raw_expected_return_pct": 0.06384912672824762,
+        "expected_return_pct": 0.04214042364064343,
+        "drift_adjustment_applied": "False",
+        "probability_of_gain": 0.517,
+        "value_at_risk_5pct": 150.487132812647,
+        "value_at_risk_95pct": 163.61217889295256,
+        "confidence_factor": 0.66,
+        "momentum_boost_applied": false,
+        "bearish_cap_applied": false,
+        "mae_enforced_price_used": true,
+        "mae_performance": {
+          "final_day_mae": 3.0000000000000067,
+          "mae_target": 3.0,
+          "mae_target_met": "True",
+          "volatility_tier": "high",
+          "avg_mae_all_days": 3.0000000000000067,
+          "mae_success_rate": 1.0,
+          "avg_range_tightening": 99.35553133440197,
+          "mae_enforcement_applied": true
+        },
+        "daily_stats_with_mae": [
+          {
+            "day": 1,
+            "mean_price": 157.09023674405069,
+            "median_price": 157.15087500646052,
+            "std_price": 4.13393933173493,
+            "min_price": 152.37752964172915,
+            "max_price": 161.80294384637222,
+            "percentile_5": 150.487132812647,
+            "percentile_25": 154.13808276254684,
+            "percentile_75": 160.0160105189222,
+            "percentile_95": 163.61217889295256,
+            "prob_above_current": 0.517,
+            "expected_return": 0.0006384912672824762,
+            "mae_percent": 3.0000000000000067,
+            "mae_target": 3.0,
+            "mae_quality": "Good",
+            "mae_target_met": "True",
+            "volatility_tier": "high",
+            "range_width_pct": 6.000000000000013,
+            "range_tightening_applied": 99.35553133440197,
+            "mae_enforcement_applied": true,
+            "enhanced_calibration_applied": true,
+            "range_calibration_results": {
+              "mae_target_pct": 3.0,
+              "final_mae_pct": 3.0000000000000067,
+              "mae_target_met": "True",
+              "volatility_tier": "high",
+              "compression_applied": {
+                "initial_mae": 4.654997457814679,
+                "target_mae": 0.03,
+                "mae_compression": 0.006444686655980196,
+                "day_compression": 1.0,
+                "total_compression": 0.006444686655980196,
+                "final_mae": 0.03,
+                "mae_target_met": "True"
+              },
+              "base_range_pct": 465.29974578146795,
+              "base_multiplier": 1.8,
+              "time_expansion": 1.0,
+              "volatility_buffer_pct": 0.2,
+              "initial_range_pct": 465.49974578146794,
+              "final_range_pct": 3.0,
+              "range_width": 9.425414204643062,
+              "is_tech_stock": false,
+              "enhanced_protection_applied": "False",
+              "mae_improvement": 99.35553133440197,
+              "range_tightening_pct": 99.35553133440197
+            },
+            "base_multiplier_used": 1.8,
+            "compression_factor": 0.006444686655980196
+          }
+        ]
+      },
+      "volatility_metrics": {
+        "annualized_volatility": 41.03558041464465,
+        "daily_volatility": 2.584998587674822,
+        "volatility_category": "Moderate"
+      },
+      "enhanced_confidence": 0.7085204919979569,
+      "confidence_breakdown": {
+        "volatility_tier": "High",
+        "vol_predictability_factor": 0.85,
+        "confidence_range": [
+          45,
+          80
+        ],
+        "signal_component": 28.581312602236466,
+        "news_component": 27.5,
+        "drift_component": 21.25,
+        "volatility_penalty": 6.839263402440775,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.36,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.36,
+        "base_confidence": 77.69131260223647,
+        "preliminary_confidence": 70.85204919979569,
+        "final_confidence": 0.7085204919979569,
+        "signal_boost_applied": false,
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.2401790974977854,
+          "volatility_impact": -6.839263402440775,
+          "data_quality_impact": 0.36,
+          "time_impact": 0
+        }
+      },
+      "volatility_aware_confidence": true,
+      "regime_analysis": {
+        "main_regime": "technical_trending",
+        "factors": {
+          "volatility": "medium",
+          "trend_strength": "moderate",
+          "news_volume": "medium",
+          "technical_alignment": "bullish_aligned",
+          "news_quality": "limited"
+        },
+        "volatility_level": 41.03558041464465,
+        "trend_strength": 0.24755576862313292,
+        "news_volume": 6,
+        "active_sources": 1,
+        "regime_confidence": 0.4
+      },
+      "adaptive_weights": {
+        "momentum": 0.28444444444444444,
+        "technical": 0.3837037037037037,
+        "news": 0.2824691358024692,
+        "volatility": 0.04938271604938272
+      },
+      "final_weights": {
+        "momentum": 0.39768104149715217,
+        "technical": 0.2985489557906157,
+        "news": 0.2585661332610072,
+        "volatility": 0.04520386945122503
+      },
+      "monte_carlo_metadata": {
+        "path_count": 1000,
+        "volatility_tier": "High",
+        "data_quality_bonus": 0.36,
+        "volatility_penalty": 6.839263402440775
+      }
+    },
+    "monte_carlo_stats": [
+      {
+        "day": 1,
+        "mean_price": 157.09023674405069,
+        "median_price": 157.15087500646052,
+        "std_price": 4.13393933173493,
+        "min_price": 151.435288931497,
+        "max_price": 162.27421455660436,
+        "percentile_5": 150.487132812647,
+        "percentile_25": 154.13808276254684,
+        "percentile_75": 160.0160105189222,
+        "percentile_95": 163.61217889295256,
+        "prob_above_current": 0.517,
+        "expected_return": 0.0006384912672824762,
+        "mae_percent": 3.4499042874215546,
+        "mae_target": 3.3000000000000003,
+        "mae_quality": "Good",
+        "mae_target_met": "True",
+        "volatility_tier": "high",
+        "range_width_pct": 6.899808574843109,
+        "range_tightening_applied": 99.29138891960045,
+        "mae_enforcement_applied": true,
+        "enhanced_calibration_applied": true,
+        "range_calibration_results": {
+          "mae_target_pct": 3.3000000000000003,
+          "final_mae_pct": 3.4499042874215546,
+          "mae_target_met": "True",
+          "volatility_tier": "high",
+          "compression_applied": {
+            "initial_mae": 4.656997457814679,
+            "target_mae": 0.033,
+            "mae_compression": 0.007086110803995463,
+            "day_compression": 1.0,
+            "total_compression": 0.007086110803995463,
+            "final_mae": 0.033,
+            "mae_target_met": "True"
+          },
+          "base_range_pct": 465.29974578146795,
+          "base_multiplier": 1.8,
+          "time_expansion": 1.0,
+          "volatility_buffer_pct": 0.4,
+          "initial_range_pct": 465.6997457814679,
+          "final_range_pct": 3.3000000000000003,
+          "range_width": 10.83892562510735,
+          "is_tech_stock": true,
+          "enhanced_protection_applied": "False",
+          "mae_improvement": 99.29138891960044,
+          "range_tightening_pct": 99.29138891960045
+        },
+        "base_multiplier_used": 1.8,
+        "compression_factor": 0.007086110803995463
+      }
+    ],
+    "options_analysis": null,
+    "fresh_search_integration": true,
+    "volatility_aware_system": true,
+    "fresh_search_metadata": {
+      "performed": true,
+      "articles_found": 1,
+      "sentiment_score": 0.2493890581292894,
+      "signal_strength": 0.14215176313369496,
+      "prediction_ready": false,
+      "quality_score": 0.6333333333333333
+    },
+    "prediction_metadata": {
+      "timeframe": "short",
+      "signal_strength": 0.2401790974977854,
+      "enhanced_confidence": 0.7085204919979569,
+      "volatility_aware_confidence": true,
+      "volatility_tier": "High",
+      "monte_carlo_paths": 1000,
+      "confidence_breakdown": {
+        "volatility_tier": "High",
+        "vol_predictability_factor": 0.85,
+        "confidence_range": [
+          45,
+          80
+        ],
+        "signal_component": 28.581312602236466,
+        "news_component": 27.5,
+        "drift_component": 21.25,
+        "volatility_penalty": 6.839263402440775,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.36,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.36,
+        "base_confidence": 77.69131260223647,
+        "preliminary_confidence": 70.85204919979569,
+        "final_confidence": 0.7085204919979569,
+        "signal_boost_applied": false,
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.2401790974977854,
+          "volatility_impact": -6.839263402440775,
+          "data_quality_impact": 0.36,
+          "time_impact": 0
+        }
+      },
+      "bearish_protection": false,
+      "drift_adjusted": "False"
+    },
+    "volatility_analysis": {
+      "volatility_percentage": 41.03558041464465,
+      "volatility_tier": "High",
+      "volatility_penalty": 6.839263402440775,
+      "data_quality_bonus": 0.36,
+      "monte_carlo_path_count": 1000,
+      "confidence_range": [
+        45,
+        80
+      ],
+      "predictability_factor": 0.85
+    }
+  },
+  "excel_data": {
+    "volatility": 41.03558041464465,
+    "calculated_volatility": 41.03558041464465,
+    "annualized_volatility": 41.03558041464465,
+    "avg_daily_change": 0.0010082909146049647,
+    "max_gain": 0.2382048008119291,
+    "max_loss": -0.1386882838472164,
+    "positive_days_pct": 49.4770716009654,
+    "recent_high": 161.9600067138672,
+    "recent_low": 90.37000274658203,
+    "sma_20": 144.6228805541992,
+    "sma_50": 127.4331521606445,
+    "sma_200": 123.4092882156372,
+    "current_rsi": 69.15121461509213,
+    "macd": 9.075014950446075,
+    "macd_signal": 8.0298928664347,
+    "atr": 5.363570077078683,
+    "excel_overall_signal": "Neutral",
+    "excel_trend": "Bullish",
+    "excel_momentum": "Neutral",
+    "performance_return_1_month": 24.75557686231329,
+    "30d_return": 24.75557686231329,
+    "recent_30d_return": 24.75557686231329,
+    "sector": "Technology",
+    "excel_recommendation": "Hold",
+    "excel_risk_level": "Moderate"
+  },
+  "news_data": {
+    "sentiment_1d": 0.2493890581292894,
+    "sentiment_7d": 0.0,
+    "news_volume_1d": 27,
+    "news_volume_7d": 21,
+    "confidence_score": 0.95,
+    "source_diversity": 2,
+    "event_impact_score": 0.020000000000000004,
+    "recent_events": [
+      {
+        "title": "[CUSTOM] Technical signals suggest momentum with caution...",
+        "sentiment": 1,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      },
+      {
+        "title": "[CUSTOM] Competitive positioning strengthens amid industry growth...",
+        "sentiment": 0.0,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      },
+      {
+        "title": "[CUSTOM] Earnings week setup creates binary outcome...",
+        "sentiment": 0.0,
+        "confidence": 0.9,
+        "date": "2025-07-21",
+        "has_catalyst": false,
+        "catalyst_types": [],
+        "source": "custom_user_input"
+      }
+    ],
+    "multi_source_enabled": true,
+    "active_sources": 2,
+    "total_articles": 27,
+    "source_breakdown": {
+      "phase3": {
+        "sentiment": 0.0,
+        "articles": 1,
+        "confidence": 0.0
+      },
+      "alpha_vantage": {
+        "sentiment": 0.23096832616373256,
+        "articles": 20,
+        "confidence": 0.9,
+        "source": "alpha_vantage"
+      },
+      "finnhub": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "newsapi": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      }
+    },
+    "aggregated_sentiment": 0.13298176354881572,
+    "aggregate_confidence": 0.8,
+    "fresh_search_performed": true,
+    "fresh_articles_found": 1,
+    "prediction_ready": false,
+    "phase3_sentiment": 0.0,
+    "signal_strength": 0.14215176313369496,
+    "signal_direction": 0.2493890581292894,
+    "quality_score": 0.6333333333333333,
+    "news_price_correlation": 0.0,
+    "custom_impact_score": 0.424,
+    "momentum_direction": "Bullish",
+    "has_major_catalyst": false,
+    "total_catalyst_count": 0,
+    "custom_articles_count": 6,
+    "custom_sentiment_impact": 0.424,
+    "catalyst_types": [],
+    "catalyst_impact_level": "none"
+  },
+  "market_data": {
+    "current_price": 156.99,
+    "open": 159.59,
+    "high": 160.83,
+    "low": 155.81,
+    "volume": 48859835,
+    "change": -3.42,
+    "change_percent": -2.132,
+    "previous_close": 160.41,
+    "current_rsi": 50.0,
+    "av_news_sentiment": 0.0,
+    "av_news_count": 0,
+    "data_source": "alpha_vantage"
+  },
+  "custom_articles": [
+    {
+      "title": "AMD Stock Surges on AI Optimism...",
+      "content": "AMD Stock Surges on AI Optimism\nAMD shares have gained 25% in July 2025, driven by the China export ban reversal and surging analyst confidence in the company's AI chip strategy, positioning the stock for a potentially volatile week ahead of August earnings.\nThe semiconductor giant has emerged as the primary beneficiary of recent policy shifts and AI market expansion, with Wall Street dramatically raising price targets while technical indicators suggest both momentum and caution. AMD's stock closed at $156.99 on July 18, approaching its 52-week high of $174.05, TradingViewStockInvest.us as multiple catalysts converge to create significant upside potential alongside execution risks.\nThe company's transformation from Intel challenger to NVIDIA alternative has accelerated dramatically, with server CPU market share reaching 39.4% DIGITIMES +2 while data center GPU revenues approach $5 billion annually. However, gaming GPU share has deteriorated to just 8%, PC GamerTechSpot highlighting AMD's strategic pivot toward higher-margin AI and enterprise markets.",
+      "sentiment_score": 1,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:36:00.003507",
+      "momentum_analysis": {
+        "momentum_score": 1.2,
+        "detected_patterns": [
+          "surging",
+          "surges"
+        ],
+        "momentum_direction": "bullish"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Export ban reversal creates billion-dollar opportunity...",
+      "content": "Export ban reversal creates billion-dollar opportunity\nThe Trump administration's decision to lift China AI chip export restrictions represents AMD's most significant near-term catalyst. tipranks Evercore projects a $700 million near-term revenue boost and potential $1.5 billion gain for 2025, TipRanks directly reversing AMD's anticipated $800 million Q2 write-down from unsold MI308X inventory. Investing.com +2\nThis policy shift addresses AMD's most significant headwind from Q1 2025, when the company still achieved 36% year-over-year revenue growth to $7.4 billion despite export restrictions. TweakTown +3 AMD's MI308X chips command premium pricing with superior margins compared to consumer GPUs, making China market access particularly valuable for profitability.\nThe licensing process remains subject to Commerce Department approval, creating ongoing uncertainty. However, CEO Lisa Su's previous characterization of China as a \"large opportunity market\" CNBC suggests aggressive pursuit of this revenue stream once regulatory pathways clear. CNBC",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:36:17.045631",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Wall Street enthusiasm reaches fever pitch...",
+      "content": "Wall Street enthusiasm reaches fever pitch\nAnalyst sentiment has shifted dramatically bullish, with Wells Fargo raising its price target 54% to $185 TheStreetCNN and HSBC doubling its target to a street-high $200. GuruFocusYahoo Finance Bank of America increased its target 35% to $175, citing confidence in AMD's MI355X chip ramp and Turin EPYC processor adoption. Benzinga +3\nThe analyst consensus now ranges from $95 to $200, with an average around $147, RoboForex +2 representing significant upside from current levels. tipranks Notably, 65% of analysts maintain buy ratings with zero sell recommendations, RoboForex +2 indicating broad professional confidence despite execution risks. Benzingatipranks\nHSBC's Frank Lee highlighted stronger-than-expected pricing power in AI GPU lineup, raising 2026 AI revenue forecasts to $15.1 billion versus consensus estimates around $10 billion. Yahoo Finance These bullish projections assume AMD can maintain $25,000 average selling prices for MI355 units, substantially above previous $15,000 estimates. Yahoo Finance\nHowever, Goldman Sachs remains more cautious with a $140 price target, citing competitive pressures from ARM processors in servers and NVIDIA's continued dominance in high-end AI applications. Investing.com",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:36:39.315952",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Technical signals suggest momentum with caution...",
+      "content": "Technical signals suggest momentum with caution\nFrom a technical perspective, AMD exhibits bullish momentum indicators with MACD values showing buy signals Financhill and the stock trading above its 50-day moving average. However, RSI readings between 60-77 suggest overbought conditions Financhill that could prompt near-term consolidation.\nKey resistance levels emerge at $160 and $172, MunafaSutraInvesttech with the 52-week high at $174.05 StockInvest.us representing a critical breakout point. Support levels sit at $152-155, which recently held during market volatility, TradingView providing a technical foundation for continued upward movement.\nOptions activity shows heavy call buying with 541,644 contracts traded, representing 97.6% of average daily volume. Nasdaq This elevated options interest, particularly around $145 strikes for July expiration, suggests retail and institutional bullish sentiment ahead of earnings.\nShort interest remains manageable at 2.46% of float, Benzinga with 39.67 million shares short requiring only 1.15 days to cover Benzinga based on average trading volume. This low short interest reduces squeeze potential but also indicates limited bearish conviction.",
+      "sentiment_score": 1,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:36:58.014595",
+      "momentum_analysis": {
+        "momentum_score": 1.0,
+        "detected_patterns": [
+          "breakout"
+        ],
+        "momentum_direction": "bullish"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Competitive positioning strengthens amid industry growth...",
+      "content": "Competitive positioning strengthens amid industry growth\nThe semiconductor industry is experiencing exceptional growth, with 2025 sales projected to increase 11.2% to $700.9 billion according to WSTS. WSTSSemiconductor Industry Association AI chips now represent over 20% of total industry sales, KPMG creating a massive addressable market for AMD's expanding portfolio.\nAMD's competitive position has strengthened significantly against Intel in servers while establishing credible alternatives to NVIDIA in AI applications. The MI300 series has gained traction with major customers including Meta, Microsoft, and OpenAI, though software ecosystem challenges persist.\nHowever, AMD's gaming GPU market share has deteriorated to just 8% versus NVIDIA's 92% dominance, PC GamerTechSpot despite launching the RX 9070 series. This weakness in consumer graphics represents a strategic retreat toward higher-margin enterprise applications.\nThe company faces intensifying competition from ARM processors in servers and custom silicon from hyperscalers. Additionally, geopolitical tensions around Taiwan semiconductor manufacturing create supply chain vulnerabilities affecting the entire industry.",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:37:18.571634",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0,
+        "detected_catalysts": [],
+        "has_financial_verb": false,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.0
+      }
+    },
+    {
+      "title": "Earnings week setup creates binary outcome...",
+      "content": "Earnings week setup creates binary outcome\nAMD's Q2 2025 earnings on August 5 after market close TradingView +2 will serve as the critical catalyst for near-term stock performance. StockTitan +2 Analysts expect $7.4 billion in revenue and $0.48 earnings per share, RoboForexTipRanks with particular focus on data center GPU momentum and MI355X chip ramp progress. Ainvest\nThe earnings report will address several key questions: How quickly can AMD capitalize on the China export ban reversal? What is the actual pricing power for AI accelerators? How sustainable is the server CPU market share growth against intensifying competition?\nManagement's guidance on the $500 billion data center accelerator market opportunity BloombergDIGITIMES will be crucial for validating current analyst enthusiasm. Any signs of execution challenges or competitive pressure could trigger significant volatility given elevated expectations.",
+      "sentiment_score": 0.0,
+      "confidence": 0.9,
+      "source": "user_input",
+      "timestamp": "2025-07-21T19:37:42.998944",
+      "momentum_analysis": {
+        "momentum_score": 0,
+        "detected_patterns": [],
+        "momentum_direction": "neutral"
+      },
+      "catalyst_analysis": {
+        "catalyst_score": 0.3,
+        "detected_catalysts": [],
+        "has_financial_verb": true,
+        "catalyst_strength": "weak",
+        "has_major_catalyst": false,
+        "catalyst_types": [],
+        "catalyst_count": 0,
+        "impact_multiplier": 1.15
+      }
+    }
+  ],
+  "mae_performance": {
+    "system_enabled": true,
+    "final_day_mae": 3.0000000000000067,
+    "mae_target": 3.0,
+    "mae_success_rate": 1.0,
+    "volatility_tier": "High",
+    "range_tightening_applied": 99.35553133440197
+  },
+  "analysis_metadata": {
+    "volatility_aware_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "regime_adaptive_weights": true
+  },
+  "options_analysis": null,
+  "quality_metrics": {
+    "prediction_confidence": 0.709,
+    "signal_strength": 0.2401790974977854,
+    "volatility_adjusted_confidence": true
+  }
+}

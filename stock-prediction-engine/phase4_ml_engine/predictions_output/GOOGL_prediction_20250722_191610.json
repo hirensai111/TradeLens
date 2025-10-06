@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "ticker": "GOOGL",
+    "timestamp": "20250722_191610",
+    "prediction_engine_version": "MAE_ENHANCED_v1.0",
+    "excel_file_path": "D:\\stock_analyzer\\output\\GOOGL_analysis_report_20250722_190425.xlsx",
+    "mae_system_enabled": true
+  },
+  "claude_analysis": {
+    "predictions_by_day": [
+      {
+        "day": 1,
+        "predicted_open": 190.4851520960462,
+        "predicted_high": 195.88883903711576,
+        "predicted_low": 185.46281681082456,
+        "predicted_close": 190.67582792397016
+      }
+    ],
+    "final_target_price": 190.67582792397016,
+    "total_expected_return_pct": 0.30290790319314737,
+    "confidence": 0.6,
+    "direction": "sideways",
+    "probability_up": 0.5,
+    "volatility_forecast": 0.2893356989685931,
+    "options_sentiment": "neutral",
+    "key_factors": [
+      "Historical momentum",
+      "Market volatility",
+      "Fresh search: 0 articles",
+      "News sentiment: +0.000"
+    ],
+    "risk_assessment": "moderate",
+    "mathematical_basis": "Enhanced fallback: 9.1% 30-day return + fresh search boost (+0.000)",
+    "reasoning": "Enhanced fallback analysis for 1 day period with 0 fresh articles",
+    "fresh_search_integration": true,
+    "fresh_search_applied": true,
+    "fresh_search_metadata": {
+      "performed": true,
+      "articles_found": 0,
+      "sentiment_score": 0.0,
+      "signal_strength": 0.0,
+      "quality_score": 0.0,
+      "boost_applied": 0.0
+    },
+    "fallback_enhancements": {
+      "fresh_search_boost": 0.0,
+      "confidence_boost": 0.0,
+      "volatility_adjustment": 0.0,
+      "enhanced_risk_assessment": true,
+      "enhanced_probability_calculation": true
+    }
+  },
+  "excel_data": {
+    "volatility": 28.93356989685931,
+    "calculated_volatility": 28.93356989685931,
+    "annualized_volatility": 28.93356989685931,
+    "avg_daily_change": 0.0009414297712799465,
+    "max_gain": 0.1022435350877875,
+    "max_loss": -0.0950939635085033,
+    "positive_days_pct": 53.66049879324215,
+    "recent_high": 189.7799987792969,
+    "recent_low": 147.6612323828153,
+    "sma_20": 177.7384986877441,
+    "sma_50": 172.3721298217773,
+    "sma_200": 173.4232608795166,
+    "current_rsi": 76.79467445484552,
+    "macd": 3.815130034187632,
+    "macd_signal": 2.991341500684006,
+    "atr": 3.84928458077567,
+    "excel_overall_signal": "Neutral",
+    "excel_trend": "Bullish",
+    "excel_momentum": "Overbought",
+    "performance_return_1_month": 9.087237095794421,
+    "30d_return": 9.087237095794421,
+    "recent_30d_return": 9.087237095794421,
+    "sector": "Technology",
+    "excel_recommendation": "Hold",
+    "excel_risk_level": "Moderate"
+  },
+  "news_data": {
+    "sentiment_1d": 0.0,
+    "sentiment_7d": 0.0,
+    "news_volume_1d": 0,
+    "news_volume_7d": 0,
+    "confidence_score": 0.0,
+    "source_diversity": 0,
+    "event_impact_score": 0.0,
+    "recent_events": [],
+    "multi_source_enabled": true,
+    "active_sources": 0,
+    "total_articles": 0,
+    "source_breakdown": {
+      "phase3": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "alpha_vantage": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "finnhub": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "newsapi": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      }
+    },
+    "aggregated_sentiment": 0.0,
+    "aggregate_confidence": 0.0,
+    "fresh_search_performed": true,
+    "fresh_articles_found": 0,
+    "prediction_ready": false,
+    "phase3_sentiment": 0.0,
+    "signal_strength": 0.0,
+    "signal_direction": 0.0,
+    "quality_score": 0.0,
+    "news_price_correlation": 0.0
+  },
+  "market_data": {
+    "current_price": 190.1,
+    "open": 186.25,
+    "high": 190.285,
+    "low": 186.15,
+    "volume": 45803129,
+    "change": 5.04,
+    "change_percent": 2.7234,
+    "previous_close": 185.06,
+    "current_rsi": 50.0,
+    "av_news_sentiment": 0.0,
+    "av_news_count": 0,
+    "data_source": "alpha_vantage"
+  },
+  "custom_articles": [],
+  "mae_performance": {
+    "system_enabled": true,
+    "final_day_mae": 0,
+    "mae_target": 0,
+    "mae_success_rate": 0,
+    "volatility_tier": "unknown",
+    "range_tightening_applied": 0
+  },
+  "analysis_metadata": {
+    "volatility_aware_confidence": false,
+    "monte_carlo_paths": 0,
+    "fresh_search_applied": true,
+    "regime_adaptive_weights": false
+  },
+  "options_analysis": null,
+  "quality_metrics": {
+    "prediction_confidence": 0.6,
+    "signal_strength": 0,
+    "volatility_adjusted_confidence": false
+  }
+}

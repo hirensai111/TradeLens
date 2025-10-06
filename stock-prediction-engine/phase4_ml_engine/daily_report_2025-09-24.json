@@ -1,0 +1,39 @@
+{
+  "date": "2025-09-24",
+  "market_data": {
+    "nifty_close": 24800,
+    "nifty_change": 0,
+    "banknifty_close": 56000,
+    "banknifty_change": 0,
+    "vix_close": 15.0,
+    "vix_change": 0.5
+  },
+  "bot_performance": {
+    "signals_sent_today": 0,
+    "high_confidence_signals": 0,
+    "scan_cycles_completed": 144,
+    "errors_today": 0,
+    "last_error": null,
+    "intraday_signals": 5,
+    "swing_signals": 0,
+    "api_issues": 0,
+    "analyzer_version": "Enhanced v4.0",
+    "automation_signals_sent": 5,
+    "automation_processing_rate": 0
+  },
+  "signals_detail": {
+    "date": "2025-09-24",
+    "signals_sent": 0,
+    "high_confidence_signals": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "total_pnl": 0,
+    "best_trade": 0,
+    "worst_trade": 0,
+    "top_signals": [],
+    "top_patterns": [],
+    "learning_insights": {}
+  },
+  "active_positions": 5,
+  "api_provider": "Zerodha Kite Connect"
+}

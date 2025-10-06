@@ -1,0 +1,270 @@
+TradeLens Project Structure
+===========================
+
+tradelens/
+│
+├── 📰 NEWS SYSTEM (news_system/)
+│   ├── collectors/                     # News data collection
+│   │   ├── adapters/                   # API-specific adapters
+│   │   │   ├── base_adapter.py         # Base adapter class
+│   │   │   ├── newsapi_adapter.py      # NewsAPI.org adapter
+│   │   │   ├── polygon_adapter.py      # Polygon.io adapter
+│   │   │   └── yfinance_adapter.py     # Yahoo Finance adapter
+│   │   ├── base_collector.py           # Base collector
+│   │   ├── newsapi_collector.py        # NewsAPI collector
+│   │   ├── reddit_collector.py         # Reddit sentiment
+│   │   ├── hybrid_collector.py         # Multi-source collector
+│   │   ├── news_api_client.py          # Main news orchestrator
+│   │   ├── news_integration_bridge.py  # Integration layer
+│   │   ├── api_config.py               # API configuration
+│   │   └── scheduler.py                # Automated scheduling
+│   │
+│   ├── processors/                     # News processing
+│   │   ├── sentiment_analyzer.py       # Advanced financial sentiment
+│   │   ├── text_processor.py           # Text cleaning/preprocessing
+│   │   ├── deduplicator.py             # Article deduplication
+│   │   └── event_extractor.py          # Financial event extraction
+│   │
+│   ├── analyzers/                      # News analysis
+│   │   ├── event_analyzer.py           # GPT-powered event analysis
+│   │   ├── sentiment_analyzer.py       # VADER + custom lexicon
+│   │   ├── sentiment_integration.py    # Sentiment integration layer
+│   │   └── correlation_analyzer.py     # News-price correlation
+│   │
+│   └── database/                       # News storage
+│       ├── models/
+│       │   └── news_models.py          # SQLAlchemy models
+│       ├── connection.py               # Database connection
+│       ├── session.py                  # Session management
+│       └── migrations.py               # Database migrations
+│
+├── 🤖 PREDICTION ENGINE (prediction_engine/)
+│   ├── models/                         # ML model implementations
+│   │
+│   ├── features/                       # Feature engineering
+│   │   └── feature_engineering.py      # Feature creation for ML
+│   │
+│   ├── data_loaders/                   # Data loading utilities
+│   │   ├── excel_loader.py             # Load from Excel
+│   │   ├── phase3_connector.py         # Connect to news data
+│   │   ├── alpha_vantage_client.py     # Alpha Vantage API
+│   │   ├── alpha_vantage_config.py     # Alpha Vantage config
+│   │   └── test_loader.py              # Test data loader
+│   │
+│   ├── technical_analysis/             # Technical indicators
+│   │   └── data_processor.py           # SMA, EMA, RSI, MACD, Bollinger, ATR, Stochastic, OBV
+│   │
+│   └── predictors/                     # Prediction engines
+│       ├── prediction_engine.py        # Main AI predictor (multi-day)
+│       ├── ultimate_ai_predictor.py    # Advanced predictor
+│       ├── predict.py                  # Prediction script
+│       ├── graph_analyzer.py           # Graph analysis
+│       └── report_generator.py         # Prediction reports
+│
+├── 📊 OPTIONS ANALYZER (options_analyzer/)
+│   ├── analyzers/                      # Options analysis
+│   │   ├── options_analyzer.py         # Greeks, pricing, volatility
+│   │   └── check_nifty_options.py      # Nifty options checker
+│   │
+│   ├── bots/                           # Automated trading bots
+│   │   ├── automated_options_bot.py    # Intraday options bot v2.0
+│   │   └── indian_trading_bot.py       # Indian market trading bot
+│   │
+│   ├── brokers/                        # Broker integrations
+│   │   ├── zerodha_api_client.py       # Zerodha Kite Connect API
+│   │   ├── zerodha_technical_analyzer.py # Zerodha technical analysis
+│   │   ├── groww_api_client.py         # Groww API client
+│   │   └── get_access_token.py         # OAuth token management
+│   │
+│   └── indian_market/                  # India-specific tools
+│       ├── ind_trade_logger.py         # Trade logging for Indian market
+│       └── ind_data_processor.py       # Indian market data processing
+│
+├── 🔧 CORE (core/)
+│   ├── config/                         # Configuration management
+│   │   ├── config.py                   # Main configuration (stock_analyzer)
+│   │   └── settings.py                 # Engine settings (prediction_engine)
+│   │
+│   ├── utils/                          # Utility functions
+│   │   └── utils.py                    # Logging, progress, cache, market hours
+│   │
+│   ├── validators/                     # Input validation
+│   │   └── validators.py               # Data quality, API validation
+│   │
+│   └── cache/                          # Caching utilities
+│       └── news_cache/                 # News article cache
+│
+├── 🌐 API (api/)
+│   ├── rest/                           # Flask REST API
+│   │   ├── api_server.py               # Main Flask server
+│   │   └── stock_analyzer_handler.py   # Request handler
+│   │
+│   └── telegram/                       # Telegram bot
+│       └── telegram_bot.py             # Trading signals bot
+│
+├── 📄 OUTPUT (output/)
+│   ├── excel/                          # Excel report generation
+│   │   └── excel_generator.py          # Professional Excel reports with charts
+│   │
+│   ├── json/                           # JSON export
+│   │   └── json_exporter.py            # Dashboard data export
+│   │
+│   └── corresponding_prompts.py        # ChatGPT prompt templates
+│
+├── 🤝 AI ASSISTANT (ai_assistant/)
+│   ├── ai_backend.py                   # ChatGPT integration
+│   ├── context_manager.py              # Conversation context
+│   └── prompt_templates.py             # Prompt templates
+│
+├── 🧪 TESTS (tests/)
+│   ├── news_system/                    # News system tests
+│   │   ├── test_news_client.py
+│   │   ├── test_sentiment_integration.py
+│   │   ├── test_event_extractor.py
+│   │   └── test_processing_pipeline.py
+│   │
+│   ├── prediction_engine/              # Prediction engine tests
+│   │   ├── test_directional_changes.py
+│   │   └── test_technical_integration.py
+│   │
+│   ├── options_analyzer/               # Options analyzer tests
+│   │   ├── test_options.py
+│   │   ├── test_bot.py
+│   │   ├── test_zerodha.py
+│   │   ├── test_groww.py
+│   │   └── simple_bot_test.py
+│   │
+│   └── integration/                    # Integration tests
+│       ├── test_full_pipeline.py
+│       ├── test_integration.py
+│       ├── test_api_server.py
+│       ├── test_complete_system.py
+│       ├── integration_test.py
+│       └── integration_test_suite.py
+│
+├── 📦 DATA (data/)                     # Data storage directory
+│
+├── 📝 LOGS (logs/)                     # Log files directory
+│
+├── 📚 DOCUMENTATION
+│   ├── README_NEW_STRUCTURE.md         # Complete structure documentation
+│   ├── QUICK_START.md                  # Quick start guide
+│   ├── REORGANIZATION_SUMMARY.md       # Reorganization summary
+│   └── STRUCTURE.txt                   # This file - visual structure
+│
+├── 🔧 SCRIPTS
+│   ├── main.py                         # Main CLI entry point
+│   ├── update_imports.py               # Import path updater
+│   └── requirements.txt                # Python dependencies
+│
+├── ⚙️ CONFIGURATION
+│   ├── .env                            # Environment variables (create from .env.example)
+│   └── .env.example                    # Environment template
+│
+└── 📁 OLD DIRECTORIES (PRESERVED FOR BACKUP)
+    ├── stock_analyzer/                 # Original stock analyzer (can be deleted after verification)
+    └── stock-prediction-engine/        # Original prediction engine (can be deleted after verification)
+
+
+KEY BENEFITS OF NEW STRUCTURE:
+================================
+
+✅ Modular Organization
+   - News System: All news collection, processing, sentiment
+   - Prediction Engine: All ML, technical analysis, predictions
+   - Options Analyzer: All options trading, bots, brokers
+   - Core: Shared utilities, config, validators
+   - API: REST and Telegram interfaces
+   - Output: Report generation
+   - Tests: Organized by module
+
+✅ No Duplication
+   - Single sentiment analyzer
+   - Unified news collection
+   - Centralized configuration
+   - Consolidated utilities
+
+✅ Clear Boundaries
+   - Each module has specific responsibility
+   - Easy to find what you need
+   - Logical file placement
+
+✅ Professional Structure
+   - Enterprise-grade organization
+   - Easy onboarding for new developers
+   - Maintainable and scalable
+
+✅ Easy Testing
+   - Tests organized by module
+   - Integration tests separate
+   - Clear test structure
+
+
+MODULE DEPENDENCIES:
+====================
+
+news_system → core (config, utils, validators)
+prediction_engine → core (config, utils)
+options_analyzer → core (config, utils)
+api → news_system, prediction_engine, options_analyzer, core
+output → prediction_engine, news_system, core
+tests → all modules
+
+
+IMPORT EXAMPLES:
+================
+
+# News System
+from news_system.collectors.news_api_client import NewsAPIClient
+from news_system.analyzers.sentiment_analyzer import SentimentAnalyzer
+from news_system.processors.event_extractor import FinancialEventExtractor
+
+# Prediction Engine
+from prediction_engine.predictors.prediction_engine import PredictionEngine
+from prediction_engine.technical_analysis.data_processor import DataProcessor
+from prediction_engine.features.feature_engineering import FeatureEngineer
+
+# Options Analyzer
+from options_analyzer.analyzers.options_analyzer import OptionsAnalyzer
+from options_analyzer.bots.automated_options_bot import AutomatedOptionsBot
+from options_analyzer.brokers.zerodha_api_client import ZerodhaClient
+
+# Core
+from core.config.config import Config
+from core.utils.utils import setup_logging, is_market_open
+from core.validators.validators import validate_symbol
+
+# API
+from api.rest.api_server import app
+from api.telegram.telegram_bot import TelegramBot
+
+# Output
+from output.excel.excel_generator import ExcelGenerator
+from output.json.json_exporter import JSONExporter
+
+
+RUNNING THE APPLICATION:
+=========================
+
+# Main analysis
+python main.py
+
+# REST API server
+python api/rest/api_server.py
+
+# Trading bot
+python options_analyzer/bots/automated_options_bot.py
+
+# Telegram bot
+python api/telegram/telegram_bot.py
+
+# Run all tests
+python -m pytest tests/
+
+# Run specific module tests
+python -m pytest tests/news_system/
+python -m pytest tests/prediction_engine/
+python -m pytest tests/options_analyzer/
+
+# Update import paths (if needed)
+python update_imports.py

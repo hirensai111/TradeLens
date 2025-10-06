@@ -1,0 +1,209 @@
+ULTIMATE ANALYSIS REPORT - AAPL
+Generated: 2025-07-29 00:09:11
+Prediction Days: 5
+================================================================================
+
+
+🎯 ULTIMATE AI STOCK PREDICTION - AAPL (5 Day Analysis + Options Trading)
+================================================================================
+Generated: 2025-07-29 00:08:31
+Analysis Type: Mathematical Computations + AI Reasoning + Multi-Source Data + Graph Analysis
+
+📊 MATHEMATICAL ANALYSIS FOUNDATION:
+──────────────────────────────────────────────────
+
+🏛️ MARKET REGIME ANALYSIS:
+  Detected Regime: Technical Trending
+  Regime Confidence: 55.0%
+  Volatility Level: 23.8%
+  Trend Strength: 0.066
+  News Volume: 20 articles
+  Active Sources: 1
+  Graph Pattern Regime: Bullish Patterns
+  Graph Override Applied: ❌
+
+⚖️ ADAPTIVE WEIGHT SYSTEM:
+  Base Weights: Mom=0.34, Tech=0.51, News=0.27
+  Final Weights: Mom=0.29, Tech=0.44, News=0.23
+  Regime Adjustment: ✅ Applied
+  Graph Analysis Boost: ✅ Applied
+
+🔢 VOLATILITY & RISK METRICS:
+  Annualized Volatility: 23.77%
+  Daily Volatility: 1.497%
+  Risk Category: Low
+
+📈 MOMENTUM & STATISTICAL ANALYSIS:
+  30-day Return: 6.63%
+  Momentum Score: +0.006
+  Direction: Bullish
+  Graph Momentum Boost: +0.0000
+  Graph Acceleration: 0.326
+
+🎯 COMPOSITE SIGNALS:
+  Overall Signal: +0.058 (-1 to +1)
+  Signal Strength: 6%
+  Signal Direction: Neutral
+
+📊 STATISTICAL PROJECTIONS:
+  Expected Return: +0.27%
+  Probability of Gain: 57%
+
+📊 ENHANCED CONFIDENCE METRICS:
+  Volatility-Aware Confidence: 73%
+  Volatility Tier: Medium
+  Monte Carlo Paths: 1,000
+  
+📈 PREDICTION QUALITY METRICS (Financial Standards):
+  Target MAE: < 2.2% of stock price
+  Actual MAE: 1.9%
+  MAE Success Rate: 100%
+  Time Horizon: 5 day(s) - Short-term
+
+📊 HISTORICAL CONTEXT (User Excel File):
+  Recent 30d performance: +6.63%
+  Historical volatility: 23.77%
+  Sector: Technology
+  Excel recommendation: Hold
+  Risk assessment: Moderate
+  📂 Excel file: AAPL_analysis_report_20250728_223509.xlsx
+
+📈 CURRENT MARKET DATA (Alpha Vantage API):
+  Current Price: $213.88
+  Daily Change: +0.12 (+0.06%)
+  Trading Range: $213.40 - $215.24
+  Volume: 40,268,781 shares
+  Previous Close: $213.76
+
+📰 MULTI-SOURCE NEWS INTELLIGENCE:
+  Total Articles: 20 (from 1 sources)
+  Multi-Source Status: ✅ Active
+  Phase 3 Sentiment: +0.000
+  Aggregated Sentiment: +0.000
+  Confidence Score: 0.00
+  Event Impact: 0.00
+  Custom Articles: 0 user-provided
+  Major Catalysts: ❌ NO
+
+📅 MULTI-DAY PRICE PREDICTIONS (5 Days):
+──────────────────────────────────────────────────
+
+📊 MAE TUNING RESULTS:
+  Target MAE: < 2.2% (Volatility-Adjusted)
+  Monte Carlo: 1,000 paths
+  Volatility Tier: Medium
+    Day 1: $214.03 (+0.1%) 
+        Range: $209.32 - $218.74
+        MAE: 2.2% 🟡 Target Met | Range Width: ±2.2%
+    Day 2: $214.41 (+0.2%) 
+        Range: $209.93 - $218.89
+        MAE: 2.1% 🟡 Target Met | Range Width: ±2.1%
+    Day 3: $214.75 (+0.4%) 
+        Range: $210.50 - $219.00
+        MAE: 2.0% ✅ Good | Range Width: ±2.0%
+    Day 4: $214.95 (+0.5%) 
+        Range: $210.83 - $219.06
+        MAE: 1.9% ✅ Good | Range Width: ±1.9%
+    Day 5: $215.09 (+0.6%) 
+        Range: $211.07 - $219.11
+        MAE: 1.9% ✅ Good | Range Width: ±1.9%
+
+📊 MAE PERFORMANCE SUMMARY:
+    Average MAE: 2.0% 🟡 TARGET MET
+    Target: < 2.5% per financial standards
+    Tuning Status: ✅ Successfully tuned
+
+🎯 5-DAY SUMMARY:
+Final Target Price: $215.09
+Total Expected Return: +0.3%
+Direction: SIDEWAYS
+Confidence: 73%
+Volatility Tier: Medium
+
+🤖 CLAUDE AI ULTIMATE PREDICTION (Enhanced with Mathematical Foundation + Graph Analysis):
+  Mathematical Basis: ENHANCED with Graph Analysis: VOLATILITY-AWARE Monte Carlo with 1,000 paths, 47.5% drift, 23.8% volatility, ascending_triangle pattern
+  Final Target Price (5d): $215.09
+  Expected Return: +0.27%
+  Direction: SIDEWAYS
+  Confidence: 73%
+  Upside Probability: 57%
+  Risk Level: LOW
+  Graph Integration: ✅ Applied
+  Primary Pattern: ascending_triangle
+  Breakout: ❌
+
+🎯 TRADING LEVELS & TARGETS:
+  5-Day Range: $211.07 - $219.11
+  Predicted Open: $214.03
+  Support Level: $207.46
+  Resistance Level: $220.30
+
+🔑 KEY FACTORS (AI-Identified):
+   • Volatility-aware confidence
+   • Dynamic Monte Carlo (1,000 paths)
+   • Signal-aware drift
+   • short-term analysis
+   • Graph technical patterns
+
+🧠 AI REASONING:
+  Volatility-aware analysis with medium volatility tier adjustments, dynamic Monte Carlo simulation, and graph technical pattern integration
+
+📊 DATA INTEGRATION SUMMARY:
+  Excel Analysis: ✅ User Excel File
+  Mathematical Computations: ✅ Comprehensive quantitative analysis
+  Multi-Source News: ✅ 1 sources, 20 articles
+  Market Data: ✅ Alpha Vantage API
+  Multi-Day Analysis: ✅ 5 day forecast
+  Custom News: ✅ 0 breaking articles 
+  Options Analysis: ❌ Not requested
+  Graph Analysis: ❌ Not performed
+  AI Analysis: ✅ Claude enhanced with volatility-aware confidence
+
+🎯 TRADING RECOMMENDATIONS:
+  Entry Signal: SIDEWAYS
+  Position Size: Aggressive (75%)
+  Stop Loss: $207.46 (-3.0%)
+  Take Profit: $220.30 (+3.0%)
+
+🔢 MATHEMATICAL FOUNDATION SUMMARY:
+  Overall Mathematical Signal: +0.058 (-1 to +1)
+  Risk-Adjusted Confidence: 73%
+  Volatility-Aware System: ✅ Applied
+  MAE Enforcement: ✅ Applied
+
+🎉 ULTIMATE PREDICTION SUMMARY:
+This represents the most comprehensive analysis possible, integrating:
+- Mathematical computations with volatility-aware confidence
+- Multi-day Monte Carlo price simulations (5 days, 1,000 paths)
+- User-selected Excel historical analysis
+- Multi-source news aggregation (1 sources)
+- User-provided breaking news with catalyst detection
+- Deep article content analysis for momentum indicators
+- Real-time/current market data
+- Advanced AI reasoning with quantitative foundation
+
+Expected Price Movement: +0.27% over 5 day(s) (SIDEWAYS)
+Final Target (5d): $215.09
+Mathematical Confidence Level: 73% (Volatility-Adjusted)
+
+
+💡 DATA SOURCES & METHODOLOGY:
+  Historical: User Excel File
+  Market: Alpha Vantage API  
+  News Sources: 1 sources, 20 articles
+  Custom News: 0 articles 
+  Mathematical Analysis: ✅ Comprehensive with adaptive weights
+  Multi-Day Forecast: ✅ 5 day Monte Carlo simulation
+  Article Analysis: ✅ Deep content analysis for momentum indicators
+  30-day Performance: 6.63%
+  Options Analysis: ❌ Not requested
+  Graph Analysis: ❌ Not performed
+  AI Enhancement: Claude with mathematical foundation, catalyst detection & volatility-aware confidence
+
+
+ENHANCEMENT SUMMARY:
+Excel File: AAPL_analysis_report_20250728_223509.xlsx
+Graph Analysis: ✅ Applied
+Custom News: 0 articles
+Multi-source News: ✅
+Volatility-Aware: ✅

@@ -1,0 +1,113 @@
+{
+  "date": "2025-09-05",
+  "market_data": {
+    "nifty_close": 24741,
+    "nifty_change": 0,
+    "banknifty_close": 54114.55,
+    "banknifty_change": 0,
+    "vix_close": 15.0,
+    "vix_change": 0.5
+  },
+  "bot_performance": {
+    "signals_sent_today": 10,
+    "high_confidence_signals": 5,
+    "scan_cycles_completed": 75,
+    "errors_today": 0,
+    "last_error": null,
+    "intraday_signals": 5,
+    "swing_signals": 0,
+    "api_issues": 0,
+    "analyzer_version": "Enhanced v4.0",
+    "automation_signals_sent": 5,
+    "automation_processing_rate": 0
+  },
+  "signals_detail": {
+    "date": "2025-09-05",
+    "signals_sent": 13,
+    "high_confidence_signals": 13,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "total_pnl": 0.0,
+    "best_trade": 0.0,
+    "worst_trade": 0.0,
+    "top_signals": [
+      {
+        "ticker": "ITC",
+        "strategy": "LONG_PUT",
+        "confidence": 0.955,
+        "entry_price": 406.4,
+        "status": "active"
+      },
+      {
+        "ticker": "ITC",
+        "strategy": "LONG_PUT",
+        "confidence": 0.955,
+        "entry_price": 406.4,
+        "status": "active"
+      },
+      {
+        "ticker": "ITC",
+        "strategy": "LONG_CALL",
+        "confidence": 0.9249999999999999,
+        "entry_price": 414.0,
+        "status": "active"
+      },
+      {
+        "ticker": "ITC",
+        "strategy": "LONG_CALL",
+        "confidence": 0.9249999999999999,
+        "entry_price": 414.0,
+        "status": "active"
+      },
+      {
+        "ticker": "ITC",
+        "strategy": "LONG_CALL",
+        "confidence": 0.9249999999999999,
+        "entry_price": 414.0,
+        "status": "active"
+      },
+      {
+        "ticker": "WIPRO",
+        "strategy": "LONG_PUT",
+        "confidence": 0.9249999999999999,
+        "entry_price": 246.71,
+        "status": "active"
+      },
+      {
+        "ticker": "WIPRO",
+        "strategy": "LONG_PUT",
+        "confidence": 0.9249999999999999,
+        "entry_price": 246.71,
+        "status": "active"
+      },
+      {
+        "ticker": "WIPRO",
+        "strategy": "LONG_PUT",
+        "confidence": 0.9249999999999999,
+        "entry_price": 246.71,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_PUT",
+        "confidence": 0.9249999999999999,
+        "entry_price": 3096.9,
+        "status": "active"
+      },
+      {
+        "ticker": "TCS",
+        "strategy": "LONG_PUT",
+        "confidence": 0.9249999999999999,
+        "entry_price": 3096.9,
+        "status": "active"
+      }
+    ],
+    "top_patterns": [],
+    "learning_insights": {
+      "most_used_strategy": "LONG_PUT",
+      "avg_confidence": 0.931
+    }
+  },
+  "active_positions": 5,
+  "api_provider": "Zerodha Kite Connect"
+}

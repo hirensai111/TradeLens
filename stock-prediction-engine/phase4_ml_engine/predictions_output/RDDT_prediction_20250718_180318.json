@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "ticker": "RDDT",
+    "timestamp": "20250718_180318",
+    "prediction_engine_version": "MAE_ENHANCED_v1.0",
+    "excel_file_path": "D:\\stock_analyzer\\output\\RDDT_analysis_report_20250718_180026.xlsx",
+    "mae_system_enabled": true
+  },
+  "claude_analysis": {
+    "predictions_by_day": [
+      {
+        "day": 1,
+        "predicted_open": 142.78,
+        "predicted_high": 148.49,
+        "predicted_low": 137.07,
+        "predicted_close": 142.78
+      }
+    ],
+    "final_target_price": 142.78,
+    "total_expected_return_pct": 0.09,
+    "confidence": 0.383,
+    "direction": "sideways",
+    "probability_up": 0.519,
+    "volatility_forecast": 0.639,
+    "signal_strength": "moderate",
+    "volatility_tier": "Extreme",
+    "volatility_adjusted_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "fresh_articles_count": 1,
+    "options_sentiment": "bearish",
+    "key_factors": [
+      "Volatility-aware confidence",
+      "Dynamic Monte Carlo (1,000 paths)",
+      "Signal-aware drift",
+      "short-term analysis"
+    ],
+    "risk_assessment": "high",
+    "mathematical_basis": "VOLATILITY-AWARE Monte Carlo with 1,000 paths, 80.0% drift, 63.9% volatility",
+    "reasoning": "Volatility-aware analysis with extreme volatility tier adjustments and dynamic Monte Carlo simulation",
+    "mathematical_analysis": {
+      "bias_calibration": {
+        "base_signal": 0.05388275131691691,
+        "recent_5d_return_pct": 0.02582060674551823,
+        "news_momentum_score": 0,
+        "total_catalyst_score": 0,
+        "enhanced_signal": 0.05396021313715346,
+        "calibrated_signal": 0.05396021313715346,
+        "strong_bullish_override": false,
+        "very_strong_bullish_override": false,
+        "strong_bearish_override": false,
+        "catalyst_boost_applied": false,
+        "technical_alignment_boost": false,
+        "signal_amplification_applied": false
+      },
+      "momentum_metrics": {
+        "thirty_day_return": 12.931860316060058,
+        "annualized_return": 330.3261990228783,
+        "momentum_score": 0.010776550263383382,
+        "adjusted_momentum": 0.008621240210706706,
+        "momentum_decay_factor": 0.8,
+        "scaled_momentum": 0.008621240210706706,
+        "momentum_direction": "Bullish"
+      },
+      "technical_signals": {
+        "rsi_value": 48.24970322873687,
+        "rsi_signal": 0.5,
+        "trend_signal": 0.5,
+        "trend_acceleration": 0.4,
+        "short_term_trend": -0.022037093878176425,
+        "price_vs_sma20": -2.2037093878176424
+      },
+      "news_analysis": {
+        "average_sentiment": 0,
+        "catalyst_boost": 0,
+        "impact_score": 0.0,
+        "has_catalysts": false,
+        "total_news_articles": 0
+      },
+      "composite_scores": {
+        "overall_signal": -0.23052800464493614,
+        "calibrated_signal_used": "False",
+        "momentum_component": 0.0022877001050523936,
+        "technical_component": -0.03611793611793615,
+        "news_component": 0.0,
+        "volatility_component": -0.19669776863205238,
+        "raw_signal": -0.23052800464493614,
+        "signal_override_protection": 1.0,
+        "drift_confidence": 0.6,
+        "drift_reduction": 0.75,
+        "signal_strength": 0.23052800464493614,
+        "signal_direction": "Bearish",
+        "prediction_timeframe": "short",
+        "bearish_protection_applied": false,
+        "context_aware_adjustment": true,
+        "momentum_amplification_applied": false,
+        "regime_adaptive_weights": true,
+        "momentum_override": "bearish",
+        "momentum_override_applied": true,
+        "drift_boost_applied": false,
+        "momentum_strength_pct": 12.931860316060058
+      },
+      "statistical_metrics": {
+        "expected_final_price": 142.6535363626213,
+        "raw_expected_return_pct": 0.18371877991844662,
+        "expected_return_pct": 0.09369657775840777,
+        "drift_adjustment_applied": "False",
+        "probability_of_gain": 0.519,
+        "value_at_risk_5pct": 133.8618191709123,
+        "value_at_risk_95pct": 151.6537046430798,
+        "confidence_factor": 0.6799999999999999,
+        "momentum_boost_applied": false,
+        "bearish_cap_applied": "False",
+        "mae_enforced_price_used": true,
+        "mae_performance": {
+          "final_day_mae": 3.9999999999999973,
+          "mae_target": 4.0,
+          "mae_target_met": "True",
+          "volatility_tier": "extreme",
+          "avg_mae_all_days": 3.9999999999999973,
+          "mae_success_rate": 1.0,
+          "avg_range_tightening": 99.50301910818376,
+          "mae_enforcement_applied": true
+        },
+        "daily_stats_with_mae": [
+          {
+            "day": 1,
+            "mean_price": 142.78183600513978,
+            "median_price": 142.6730949454788,
+            "std_price": 5.4932287594302585,
+            "min_price": 137.0705625649342,
+            "max_price": 148.49310944534537,
+            "percentile_5": 133.8618191709123,
+            "percentile_25": 139.031521501402,
+            "percentile_75": 146.50711536139525,
+            "percentile_95": 151.6537046430798,
+            "prob_above_current": 0.519,
+            "expected_return": 0.0018371877991844661,
+            "mae_percent": 3.9999999999999973,
+            "mae_target": 4.0,
+            "mae_quality": "Excellent",
+            "mae_target_met": "True",
+            "volatility_tier": "extreme",
+            "range_width_pct": 7.999999999999995,
+            "range_tightening_applied": 99.50301910818376,
+            "mae_enforcement_applied": true,
+            "enhanced_calibration_applied": true,
+            "range_calibration_results": {
+              "mae_target_pct": 4.0,
+              "final_mae_pct": 3.9999999999999973,
+              "mae_target_met": "True",
+              "volatility_tier": "extreme",
+              "compression_applied": {
+                "initial_mae": 8.048599183324532,
+                "target_mae": 0.04,
+                "mae_compression": 0.004969808918162292,
+                "day_compression": 1.0,
+                "total_compression": 0.004969808918162292,
+                "final_mae": 0.04,
+                "mae_target_met": "True"
+              },
+              "base_range_pct": 804.5599183324532,
+              "base_multiplier": 2.0,
+              "time_expansion": 1.0,
+              "volatility_buffer_pct": 0.3,
+              "initial_range_pct": 804.8599183324532,
+              "final_range_pct": 4.0,
+              "range_width": 11.422546880411176,
+              "is_tech_stock": false,
+              "enhanced_protection_applied": "False",
+              "mae_improvement": 99.50301910818378,
+              "range_tightening_pct": 99.50301910818376
+            },
+            "base_multiplier_used": 2.0,
+            "compression_factor": 0.004969808918162292
+          }
+        ]
+      },
+      "volatility_metrics": {
+        "annualized_volatility": 63.859963762743234,
+        "daily_volatility": 4.022799591662266,
+        "volatility_category": "High"
+      },
+      "enhanced_confidence": 0.38305089867622655,
+      "confidence_breakdown": {
+        "volatility_tier": "Extreme",
+        "vol_predictability_factor": 0.7,
+        "confidence_range": [
+          30,
+          70
+        ],
+        "signal_component": 22.59174445520374,
+        "news_component": 22.5,
+        "drift_component": 17.5,
+        "volatility_penalty": 21.28665458758108,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.0,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.0,
+        "base_confidence": 62.59174445520374,
+        "preliminary_confidence": 41.305089867622655,
+        "final_confidence": 0.38305089867622655,
+        "signal_boost_applied": "False",
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.23052800464493614,
+          "volatility_impact": -21.28665458758108,
+          "data_quality_impact": 0.0,
+          "time_impact": 0
+        }
+      },
+      "volatility_aware_confidence": true,
+      "regime_analysis": {
+        "main_regime": "mixed_signals",
+        "factors": {
+          "volatility": "high",
+          "trend_strength": "moderate",
+          "news_volume": "low",
+          "technical_alignment": "mixed",
+          "news_quality": "limited"
+        },
+        "volatility_level": 63.859963762743234,
+        "trend_strength": 0.1293186031606006,
+        "news_volume": 0,
+        "active_sources": 1,
+        "regime_confidence": 0.6
+      },
+      "adaptive_weights": {
+        "momentum": 0.26535626535626533,
+        "technical": 0.36117936117936117,
+        "news": 0.32432432432432434,
+        "volatility": 0.04914004914004914
+      },
+      "final_weights": {
+        "momentum": 0.26535626535626533,
+        "technical": 0.36117936117936117,
+        "news": 0.32432432432432434,
+        "volatility": 0.04914004914004914
+      },
+      "monte_carlo_metadata": {
+        "path_count": 1000,
+        "volatility_tier": "Extreme",
+        "data_quality_bonus": 0.0,
+        "volatility_penalty": 21.28665458758108
+      }
+    },
+    "monte_carlo_stats": [
+      {
+        "day": 1,
+        "mean_price": 142.78183600513978,
+        "median_price": 142.6730949454788,
+        "std_price": 5.4932287594302585,
+        "min_price": 137.0705625649342,
+        "max_price": 148.49310944534537,
+        "percentile_5": 133.8618191709123,
+        "percentile_25": 139.031521501402,
+        "percentile_75": 146.50711536139525,
+        "percentile_95": 151.6537046430798,
+        "prob_above_current": 0.519,
+        "expected_return": 0.0018371877991844661,
+        "mae_percent": 3.9999999999999973,
+        "mae_target": 4.0,
+        "mae_quality": "Excellent",
+        "mae_target_met": "True",
+        "volatility_tier": "extreme",
+        "range_width_pct": 7.999999999999995,
+        "range_tightening_applied": 99.50301910818376,
+        "mae_enforcement_applied": true,
+        "enhanced_calibration_applied": true,
+        "range_calibration_results": {
+          "mae_target_pct": 4.0,
+          "final_mae_pct": 3.9999999999999973,
+          "mae_target_met": "True",
+          "volatility_tier": "extreme",
+          "compression_applied": {
+            "initial_mae": 8.048599183324532,
+            "target_mae": 0.04,
+            "mae_compression": 0.004969808918162292,
+            "day_compression": 1.0,
+            "total_compression": 0.004969808918162292,
+            "final_mae": 0.04,
+            "mae_target_met": "True"
+          },
+          "base_range_pct": 804.5599183324532,
+          "base_multiplier": 2.0,
+          "time_expansion": 1.0,
+          "volatility_buffer_pct": 0.3,
+          "initial_range_pct": 804.8599183324532,
+          "final_range_pct": 4.0,
+          "range_width": 11.422546880411176,
+          "is_tech_stock": false,
+          "enhanced_protection_applied": "False",
+          "mae_improvement": 99.50301910818378,
+          "range_tightening_pct": 99.50301910818376
+        },
+        "base_multiplier_used": 2.0,
+        "compression_factor": 0.004969808918162292
+      }
+    ],
+    "options_analysis": null,
+    "fresh_search_integration": true,
+    "volatility_aware_system": true,
+    "fresh_search_metadata": {
+      "performed": true,
+      "articles_found": 1,
+      "sentiment_score": 0.1304895175118979,
+      "signal_strength": 0.10439161400951834,
+      "prediction_ready": false,
+      "quality_score": 0.8
+    },
+    "prediction_metadata": {
+      "timeframe": "short",
+      "signal_strength": 0.23052800464493614,
+      "enhanced_confidence": 0.38305089867622655,
+      "volatility_aware_confidence": true,
+      "volatility_tier": "Extreme",
+      "monte_carlo_paths": 1000,
+      "confidence_breakdown": {
+        "volatility_tier": "Extreme",
+        "vol_predictability_factor": 0.7,
+        "confidence_range": [
+          30,
+          70
+        ],
+        "signal_component": 22.59174445520374,
+        "news_component": 22.5,
+        "drift_component": 17.5,
+        "volatility_penalty": 21.28665458758108,
+        "time_penalty": 0,
+        "data_quality_bonus": 0.0,
+        "mc_quality_bonus": 0,
+        "news_volume_bonus": 0.0,
+        "base_confidence": 62.59174445520374,
+        "preliminary_confidence": 41.305089867622655,
+        "final_confidence": 0.38305089867622655,
+        "signal_boost_applied": "False",
+        "volatility_adjusted": true,
+        "confidence_factors": {
+          "signal_strength": 0.23052800464493614,
+          "volatility_impact": -21.28665458758108,
+          "data_quality_impact": 0.0,
+          "time_impact": 0
+        }
+      },
+      "bearish_protection": false,
+      "drift_adjusted": "False"
+    },
+    "volatility_analysis": {
+      "volatility_percentage": 63.859963762743234,
+      "volatility_tier": "Extreme",
+      "volatility_penalty": 21.28665458758108,
+      "data_quality_bonus": 0.0,
+      "monte_carlo_path_count": 1000,
+      "confidence_range": [
+        30,
+        70
+      ],
+      "predictability_factor": 0.7
+    }
+  },
+  "excel_data": {
+    "volatility": 63.859963762743234,
+    "calculated_volatility": 63.859963762743234,
+    "annualized_volatility": 63.859963762743234,
+    "avg_daily_change": 0.005164121349103646,
+    "max_gain": 0.4197456090611897,
+    "max_loss": -0.1992088047702908,
+    "positive_days_pct": 50.0,
+    "recent_high": 164.5500030517578,
+    "recent_low": 94.88999938964844,
+    "sma_20": 145.7314987182617,
+    "sma_50": 125.6279989624023,
+    "sma_200": 133.8008499145508,
+    "current_rsi": 48.24970322873687,
+    "macd": 5.384076689810399,
+    "macd_signal": 7.24546612807778,
+    "atr": 7.790715898786273,
+    "excel_overall_signal": "Neutral",
+    "excel_trend": "Bullish",
+    "excel_momentum": "Neutral",
+    "performance_return_1_month": 12.931860316060058,
+    "30d_return": 12.931860316060058,
+    "recent_30d_return": 12.931860316060058,
+    "sector": "Technology",
+    "excel_recommendation": "Hold",
+    "excel_risk_level": "Moderate"
+  },
+  "news_data": {
+    "sentiment_1d": 0.1304895175118979,
+    "sentiment_7d": 0.08000000000000002,
+    "news_volume_1d": 21,
+    "news_volume_7d": 21,
+    "confidence_score": 0.8,
+    "source_diversity": 2,
+    "event_impact_score": 0.04400000000000001,
+    "recent_events": [],
+    "multi_source_enabled": true,
+    "active_sources": 2,
+    "total_articles": 21,
+    "source_breakdown": {
+      "phase3": {
+        "sentiment": 0.08000000000000002,
+        "articles": 1,
+        "confidence": 0.0
+      },
+      "alpha_vantage": {
+        "sentiment": 0.16769231988908587,
+        "articles": 20,
+        "confidence": 0.9,
+        "source": "alpha_vantage"
+      },
+      "finnhub": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      },
+      "newsapi": {
+        "sentiment": 0.0,
+        "articles": 0,
+        "confidence": 0.0
+      }
+    },
+    "aggregated_sentiment": 0.1304895175118979,
+    "aggregate_confidence": 0.8,
+    "fresh_search_performed": true,
+    "fresh_articles_found": 1,
+    "prediction_ready": false,
+    "phase3_sentiment": 0.08000000000000002,
+    "signal_strength": 0.10439161400951834,
+    "signal_direction": 0.1304895175118979,
+    "quality_score": 0.8,
+    "news_price_correlation": 0.0
+  },
+  "market_data": {
+    "current_price": 142.52,
+    "open": 144.3,
+    "high": 147.05,
+    "low": 140.89,
+    "volume": 4454730,
+    "change": -1.79,
+    "change_percent": -1.2404,
+    "previous_close": 144.31,
+    "current_rsi": 50.0,
+    "av_news_sentiment": 0.0,
+    "av_news_count": 0,
+    "data_source": "alpha_vantage"
+  },
+  "custom_articles": [],
+  "mae_performance": {
+    "system_enabled": true,
+    "final_day_mae": 3.9999999999999973,
+    "mae_target": 4.0,
+    "mae_success_rate": 1.0,
+    "volatility_tier": "Extreme",
+    "range_tightening_applied": 99.50301910818376
+  },
+  "analysis_metadata": {
+    "volatility_aware_confidence": true,
+    "monte_carlo_paths": 1000,
+    "fresh_search_applied": true,
+    "regime_adaptive_weights": true
+  },
+  "options_analysis": null,
+  "quality_metrics": {
+    "prediction_confidence": 0.383,
+    "signal_strength": 0.23052800464493614,
+    "volatility_adjusted_confidence": true
+  }
+}

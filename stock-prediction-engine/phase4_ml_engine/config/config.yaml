@@ -1,0 +1,206 @@
+# Feature Engineering Pipeline Configuration
+# Stock Prediction Engine - Phase 4 ML Engine
+
+# Data source paths
+data_sources:
+  excel_path: 'D:/stock-prediction-engine/phase4_ml_engine/data/MSFT_analysis_report_20250715_141735.xlsx'
+  phase3_db_path: 'D:/stock-prediction-engine/data/news_intelligence.db'
+  
+  # Additional data paths (if needed)
+  output_path: 'D:/stock-prediction-engine/phase4_ml_engine/output'
+  models_path: 'D:/stock-prediction-engine/phase4_ml_engine/models'
+  logs_path: 'D:/stock-prediction-engine/phase4_ml_engine/logs'
+
+# Feature extraction settings
+features:
+  # Technical indicators to extract
+  technical_indicators:
+    - 'SMA_20'
+    - 'SMA_50'
+    - 'SMA_200'
+    - 'RSI'
+    - 'MACD'
+    - 'MACD_Signal'
+    - 'BB_Upper'
+    - 'BB_Lower'
+    - 'ATR'
+    - 'Volume'
+    - 'OBV'  # On-Balance Volume
+    - 'ADX'  # Average Directional Index
+    - 'Stochastic_K'
+    - 'Stochastic_D'
+  
+  # Sentiment features to extract
+  sentiment_features:
+    - 'sentiment_1d'
+    - 'sentiment_3d'
+    - 'sentiment_7d'
+    - 'news_volume_1d'
+    - 'news_volume_3d'
+    - 'news_volume_7d'
+    - 'correlation_strength'
+    - 'event_impact_score'
+    - 'confidence_score'
+    - 'alert_count'
+    - 'source_diversity'
+  
+  # Time-based features
+  time_features:
+    - 'day_of_week'
+    - 'month'
+    - 'quarter'
+    - 'is_earnings_season'
+    - 'is_month_end'
+    - 'is_quarter_end'
+    - 'is_friday'
+    - 'is_monday'
+    - 'holiday_week'
+    - 'triple_witching'
+    - 'opex_week'
+  
+  # Price action features
+  price_features:
+    - 'open'
+    - 'high'
+    - 'low'
+    - 'close'
+    - 'volume'
+    - 'daily_change_pct'
+    - 'price_range'
+    - 'body_size'
+    - 'upper_shadow'
+    - 'lower_shadow'
+    - 'price_momentum_1d'
+    - 'price_momentum_5d'
+    - 'volume_ratio'
+  
+  # Quality thresholds
+  quality_thresholds:
+    min_data_completeness: 0.95  # 95% data completeness required
+    min_confidence_score: 0.7    # Minimum sentiment confidence
+    max_missing_features: 0.1    # Maximum 10% missing features allowed
+    min_news_volume: 1           # Minimum news articles for valid sentiment
+    max_data_age_days: 7         # Maximum age of data in days
+
+# ML model settings
+ml_settings:
+  # Target variable settings
+  target_offset_days: 1        # Predict price change N days ahead
+  target_type: 'return'        # 'return' or 'direction'
+  
+  # Data settings
+  lookback_days: 30           # Historical data to consider
+  min_training_samples: 100   # Minimum samples for training
+  train_test_split: 0.8       # Train/test split ratio
+  validation_split: 0.2       # Validation split from training data
+  
+  # Feature selection
+  feature_selection_enabled: true
+  feature_selection_method: 'mutual_info'  # 'mutual_info', 'random_forest', 'correlation'
+  feature_selection_threshold: 0.01
+  max_features: 200           # Maximum features to keep
+  
+  # Data preprocessing
+  scaling_method: 'standard'  # 'standard', 'minmax', 'robust'
+  handle_outliers: true
+  outlier_threshold: 3.0      # Standard deviations for outlier detection
+  
+  # Cross-validation settings
+  cv_folds: 5
+  cv_strategy: 'time_series'  # 'time_series' or 'random'
+
+# Model configurations
+models:
+  # Random Forest settings
+  random_forest:
+    n_estimators: 100
+    max_depth: 20
+    min_samples_split: 5
+    min_samples_leaf: 2
+    max_features: 'sqrt'
+    n_jobs: -1
+    random_state: 42
+  
+  # XGBoost settings
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    gamma: 0
+    reg_alpha: 0
+    reg_lambda: 1
+    n_jobs: -1
+    random_state: 42
+  
+  # Neural Network settings
+  neural_network:
+    hidden_layers: [128, 64, 32]
+    activation: 'relu'
+    dropout_rate: 0.2
+    learning_rate: 0.001
+    batch_size: 32
+    epochs: 100
+    early_stopping_patience: 10
+    optimizer: 'adam'
+
+# Backtesting settings
+backtesting:
+  initial_capital: 100000
+  commission_rate: 0.001      # 0.1% commission
+  slippage_rate: 0.0005      # 0.05% slippage
+  position_sizing: 'fixed'    # 'fixed', 'kelly', 'risk_parity'
+  max_position_size: 0.2      # Maximum 20% of capital per position
+  stop_loss: 0.02            # 2% stop loss
+  take_profit: 0.05          # 5% take profit
+  
+# Logging settings
+logging:
+  level: 'INFO'              # 'DEBUG', 'INFO', 'WARNING', 'ERROR'
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file_handler: true
+  console_handler: true
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Performance monitoring
+monitoring:
+  track_feature_importance: true
+  track_prediction_accuracy: true
+  save_predictions: true
+  performance_report_frequency: 'daily'  # 'daily', 'weekly', 'monthly'
+  alert_on_anomalies: true
+  anomaly_threshold: 2.0     # Standard deviations for anomaly detection
+
+# API settings (if applicable)
+api:
+  enabled: false
+  host: 'localhost'
+  port: 8000
+  cors_enabled: true
+  rate_limit: 100            # Requests per minute
+  api_key_required: true
+
+# Database settings (for storing results)
+database:
+  enabled: true
+  type: 'sqlite'             # 'sqlite', 'postgresql', 'mysql'
+  connection_string: 'sqlite:///D:/stock-prediction-engine/phase4_ml_engine/data/ml_results.db'
+  
+# Notification settings
+notifications:
+  enabled: false
+  email:
+    smtp_server: 'smtp.gmail.com'
+    smtp_port: 587
+    sender_email: 'your-email@gmail.com'
+    recipient_emails:
+      - 'recipient@example.com'
+  
+  # Notification triggers
+  triggers:
+    high_confidence_prediction: 0.8
+    large_position_alert: 0.15
+    model_performance_drop: 0.1
+    system_error: true

@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-08-12T22:25:11.727551",
+  "summary": {
+    "total_tests": 6,
+    "passed_tests": 6,
+    "failed_tests": 0,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "scenario": "HIGH_CONFIDENCE_BULLISH_INTRADAY",
+      "passed": true,
+      "strategy": "INTRADAY_LONG_CALL",
+      "confidence": 0.95,
+      "legs_count": 1,
+      "expected": "INTRADAY_LONG_CALL (>= 0.80)",
+      "actual": "INTRADAY_LONG_CALL (95.0%)",
+      "summary": "Perfect match: INTRADAY_LONG_CALL with 95.0% confidence"
+    },
+    {
+      "scenario": "HIGH_CONFIDENCE_BEARISH_INTRADAY",
+      "passed": true,
+      "strategy": "INTRADAY_LONG_PUT",
+      "confidence": 0.95,
+      "legs_count": 1,
+      "expected": "INTRADAY_LONG_PUT (>= 0.80)",
+      "actual": "INTRADAY_LONG_PUT (95.0%)",
+      "summary": "Perfect match: INTRADAY_LONG_PUT with 95.0% confidence"
+    },
+    {
+      "scenario": "HIGH_CONFIDENCE_BULLISH_SWING",
+      "passed": true,
+      "strategy": "LONG_CALL",
+      "confidence": 0.9199999999999999,
+      "legs_count": 1,
+      "expected": "LONG_CALL (>= 0.80)",
+      "actual": "LONG_CALL (92.0%)",
+      "summary": "Perfect match: LONG_CALL with 92.0% confidence"
+    },
+    {
+      "scenario": "MEDIUM_CONFIDENCE_BULLISH",
+      "passed": true,
+      "strategy": "BULL_CALL_SPREAD",
+      "confidence": 0.7300000000000001,
+      "legs_count": 2,
+      "expected": "BULL_CALL_SPREAD (>= 0.60 and < 0.80)",
+      "actual": "BULL_CALL_SPREAD (73.0%)",
+      "summary": "Perfect match: BULL_CALL_SPREAD with 73.0% confidence"
+    },
+    {
+      "scenario": "LOW_CONFIDENCE_NEUTRAL",
+      "passed": true,
+      "strategy": "LONG_STRADDLE",
+      "confidence": 0.5,
+      "legs_count": 2,
+      "expected": "LONG_STRADDLE (< 0.60)",
+      "actual": "LONG_STRADDLE (50.0%)",
+      "summary": "Perfect match: LONG_STRADDLE with 50.0% confidence"
+    },
+    {
+      "scenario": "BEARISH_TECHNICAL_OVERRIDE",
+      "passed": true,
+      "strategy": "INTRADAY_LONG_PUT",
+      "confidence": 0.9,
+      "legs_count": 1,
+      "expected": "INTRADAY_LONG_PUT (>= 0.75)",
+      "actual": "INTRADAY_LONG_PUT (90.0%)",
+      "summary": "Perfect match: INTRADAY_LONG_PUT with 90.0% confidence"
+    }
+  ]
+}

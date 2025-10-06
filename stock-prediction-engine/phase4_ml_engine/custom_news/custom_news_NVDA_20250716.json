@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Nvidia just received a major boost as the Trump administration announced it will...",
+    "content": "Nvidia just received a major boost as the Trump administration announced it will approve licenses allowing the company to resume selling its H20 GPUs in China, reversing a previous export ban that had cost Nvidia billions. This follows Nvidia CEO Jensen Huang\u2019s recent meeting with President Trump. Additionally, the administration has revoked the Biden-era AI Diffusion Rule, which had restricted advanced chip exports to allied nations like Saudi Arabia and Israel. These policy shifts significantly expand Nvidia\u2019s addressable market and align with rising global interest in sovereign AI infrastructure. As a result, analysts are expected to raise earnings forecasts, which typically drives stock prices higher. Given Nvidia\u2019s strong growth prospects\u2014projected at 41% annually through FY2027\u2014even its high valuation appears reasonable, making now an opportune time for investors to consider buying the stock.",
+    "sentiment_score": 0.5,
+    "confidence": 0.9,
+    "source": "user_input",
+    "timestamp": "2025-07-16T16:18:57.009134",
+    "momentum_analysis": {
+      "momentum_score": 0.5,
+      "detected_patterns": [
+        "rising"
+      ],
+      "momentum_direction": "bullish"
+    },
+    "catalyst_analysis": {
+      "catalyst_score": 0,
+      "detected_catalysts": [],
+      "has_financial_verb": false,
+      "catalyst_strength": "weak",
+      "has_major_catalyst": false,
+      "catalyst_types": [],
+      "catalyst_count": 0,
+      "impact_multiplier": 1.0
+    }
+  }
+]

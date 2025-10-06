@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeLens AI Assistant</title>
+    <link rel="stylesheet" href="chat_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Chat Toggle Button -->
+    <div id="chat-toggle" class="chat-toggle">
+        <div class="chat-icon">
+            <span class="tl-avatar">TL</span>
+            <div class="status-dot"></div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget hidden">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <span class="tl-avatar">TL</span>
+                <div class="status-dot active"></div>
+            </div>
+            <div class="chat-title">
+                <h3>TradeLens AI</h3>
+                <span class="status-text">Online</span>
+            </div>
+            <button id="chat-close" class="chat-close">×</button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai-message">
+                <div class="message-avatar">TL</div>
+                <div class="message-content">
+                    <p>Hi! I'm TradeLens AI, your personal trading assistant. I can help analyze stocks, explain indicators, and provide trading insights based on real-time data.</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div id="typing-indicator" class="typing-indicator hidden">
+            <div class="message-avatar">TL</div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Quick Action Chips -->
+        <div class="quick-actions">
+            <button class="quick-chip" data-message="What's the trend?">What's the trend?</button>
+            <button class="quick-chip" data-message="Should I buy?">Should I buy?</button>
+            <button class="quick-chip" data-message="Risk analysis">Risk analysis</button>
+            <button class="quick-chip" data-message="Compare with sector">Compare with sector</button>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Ask about this stock..." autocomplete="off">
+            <button id="send-button" class="send-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="m22 2-7 20-4-9-9-4z"/>
+                    <path d="M22 2 11 13"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Clear Chat Option -->
+        <div class="chat-footer">
+            <button id="clear-chat" class="clear-chat-btn">Clear Chat</button>
+        </div>
+    </div>
+
+    <script src="chat_handler.js"></script>
+</body>
+</html>

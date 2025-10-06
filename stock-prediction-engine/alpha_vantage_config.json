@@ -1,0 +1,19 @@
+{
+  "alpha_vantage": {
+    "api_key": "YOUR_API_KEY_HERE",
+    "base_url": "https://www.alphavantage.co/query",
+    "max_requests_per_minute": 5,
+    "cache_duration_hours": 1,
+    "daily_limit": 500
+  },
+  "correlation_analysis": {
+    "default_analysis_days": 30,
+    "min_events_for_analysis": 3,
+    "min_price_data_points": 5,
+    "significant_event_threshold": 2.0
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "correlation_analyzer.log"
+  }
+}
