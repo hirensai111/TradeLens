@@ -1,6 +1,6 @@
 # TradeLens - AI-Powered Stock Analysis & Trading Platform
 
-![TradeLens](stock_analyzer/screenshots/tradeLens_thumbnail.png)
+![TradeLens](screenshots/tradeLens_thumbnail.png)
 
 **TradeLens** is a comprehensive, enterprise-grade stock analysis and trading platform that combines real-time market data, advanced technical analysis, AI-powered predictions, and automated trading capabilities. Transform raw market data into actionable insights with our professional dashboard and intelligent analysis tools.
 
@@ -61,27 +61,27 @@
 ## 📸 Screenshots
 
 ### Landing Page - Predict Mode
-![Predict Mode Landing](stock_analyzer/screenshots/predict_mode_landing.png)
+![Predict Mode Landing](screenshots/predict_mode_landing.png)
 *Clean, modern interface with popular stock shortcuts and prediction mode selector*
 
 ### Dashboard Overview
-![Dashboard](stock_analyzer/screenshots/tradeLens_Dashboard.png)
+![Dashboard](screenshots/tradeLens_Dashboard.png)
 *Comprehensive stock analysis with real-time data and technical indicators*
 
 ### Price Predictions - 5 Day Forecast
-![5 Day Forecast](stock_analyzer/screenshots/price_forecast_5day.png)
+![5 Day Forecast](screenshots/price_forecast_5day.png)
 *Short-term price predictions with confidence intervals and risk assessment*
 
 ### Price Predictions - 15 Day Forecast
-![15 Day Forecast](stock_analyzer/screenshots/price_forecast_15day.png)
+![15 Day Forecast](screenshots/price_forecast_15day.png)
 *Medium-term forecasts with bullish momentum analysis*
 
 ### Price Predictions - 30 Day Forecast
-![30 Day Forecast](stock_analyzer/screenshots/price_forecast_30day.png)
+![30 Day Forecast](screenshots/price_forecast_30day.png)
 *Long-term predictions with volatility-adjusted confidence bands*
 
 ### AI Reasoning & Analysis
-![AI Reasoning](stock_analyzer/screenshots/ai_reasoning_predictions.png)
+![AI Reasoning](screenshots/ai_reasoning_predictions.png)
 *Detailed AI-powered analysis with confidence scores and reasoning*
 
 ---
