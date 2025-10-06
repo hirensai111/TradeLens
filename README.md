@@ -660,29 +660,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/hirensai111/TradeLens/issues)
-- **Documentation**: See `/docs` folder and inline code documentation
-- **Examples**: Check `/tests` and example scripts
-
----
-
-## 🔮 Roadmap
-
-### Upcoming Features
-- [ ] Machine learning model improvements
-- [ ] More broker integrations (Interactive Brokers, TD Ameritrade)
-- [ ] Portfolio optimization tools
-- [ ] Backtesting framework
-- [ ] Mobile app (React Native)
-- [ ] Real-time WebSocket streaming
-- [ ] Advanced charting (candlestick patterns)
-- [ ] Social trading features
-- [ ] Cryptocurrency support
-
----
-
 ## ⚠️ Disclaimer
 
 This software is for educational and informational purposes only. It is not financial advice. Always do your own research and consult with a qualified financial advisor before making investment decisions. Trading stocks and options involves substantial risk of loss.
