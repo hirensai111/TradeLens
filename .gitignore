@@ -55,8 +55,10 @@ data/
 *.sqlite
 *.sqlite3
 
-# Output
-output/
+# Generated output files
+output/*.xlsx
+output/*.csv
+output/viz_data/
 *.xlsx
 *.csv
 nul
@@ -66,7 +68,6 @@ node_modules/
 **/node_modules/
 
 # Build files
-frontend/build/
 frontend/.env
 
 # Test files
