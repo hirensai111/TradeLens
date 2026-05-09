@@ -6,6 +6,7 @@ Provides REST API endpoints for stock analysis and JSON data export
 import time
 import os
 import sys
+import traceback
 from pathlib import Path
 
 # Add project root to Python path
@@ -322,10 +323,12 @@ class StockAnalyzerAPI:
 
             except Exception as e:
                 analysis_time = time.time() - start_time
-                self.logger.error(f"Unexpected error analyzing {ticker}: {e}")
+                error_traceback = traceback.format_exc()
+                self.logger.error(f"Unexpected error analyzing {ticker}: {e}\n{error_traceback}")
                 return jsonify({
                     'success': False,
                     'error': f'Internal server error: {str(e)}',
+                    'traceback': error_traceback,
                     'ticker': ticker,
                     'analysis_time_seconds': round(analysis_time, 2),
                     'timestamp': datetime.now().isoformat()
