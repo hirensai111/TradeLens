@@ -15,7 +15,7 @@ class APIService {
 
   constructor() {
     this.api = axios.create({
-      baseURL: process.env.REACT_APP_API_URL || '',
+      baseURL: '',
       timeout: 600000, // 10 minutes for new stock analysis
       headers: {
         'Content-Type': 'application/json',
