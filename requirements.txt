@@ -1,7 +1,7 @@
-# Core dependencies - Python 3.12 compatible
+# Core dependencies
 python-dotenv==1.0.0
 pandas==2.2.0
-numpy<2.0.0  # Pin to 1.x for matplotlib compatibility
+numpy<2.0.0
 openpyxl==3.1.2
 
 # Data sources
@@ -16,7 +16,7 @@ ta==0.10.2
 
 # OpenAI integration
 openai==1.35.0
-httpx<0.28  # Required for OpenAI compatibility
+httpx<0.28
 
 # Excel formatting and charts
 xlsxwriter==3.1.2
@@ -26,29 +26,24 @@ seaborn==0.13.0
 # Logging and formatting
 colorlog==6.7.0
 
-# Testing
-pytest==7.4.0
-pytest-cov==4.1.0
-
-# Code quality
-black==23.7.0
-flake8==6.0.0
-mypy==1.4.1
-
-# Additional utilities
-python-dateutil==2.8.2
-pytz==2023.3
-tqdm==4.65.0
-
-# API server dependencies
+# API server
 flask==3.0.0
 flask-cors==4.0.0
-# Phase 2 Dependencies
-requests>=2.31.0
+gunicorn==23.0.0
+
+# News scraping
 beautifulsoup4>=4.12.0
 selenium>=4.15.0
 lxml>=4.9.0
 newspaper3k>=0.2.8
 feedparser>=6.0.10
-python-dateutil>=2.8.2
 fake-useragent>=1.4.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+tqdm==4.65.0
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0

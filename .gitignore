@@ -66,8 +66,8 @@ node_modules/
 **/node_modules/
 
 # Build files
-stock_analyzer/stock-dashboard-frontend/build/
-stock_analyzer/stock-dashboard-frontend/.env
+frontend/build/
+frontend/.env
 
 # Test files
 test_files.txt

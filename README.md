@@ -130,7 +130,7 @@ CACHE_ENABLED=True
 ### 3. Frontend Setup
 ```bash
 # Navigate to frontend directory
-cd stock_analyzer/stock-dashboard-frontend
+cd frontend
 
 # Install dependencies
 npm install
@@ -465,7 +465,7 @@ gunicorn --env OPENAI_API_KEY=$OPENAI_API_KEY \
 
 ### Frontend (Netlify/Vercel)
 ```bash
-cd stock_analyzer/stock-dashboard-frontend
+cd frontend
 npm run build
 # Deploy the 'build' folder to your hosting service
 ```
@@ -500,7 +500,7 @@ python generate_all_stocks.py
 python main.py --ticker NVDA
 
 # 3. View in dashboard
-cd stock_analyzer/stock-dashboard-frontend && npm start
+cd frontend && npm start
 ```
 
 ### Workflow 2: Prediction Analysis

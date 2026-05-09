@@ -15,7 +15,7 @@ sys.path.insert(0, str(project_root))
 import json
 from datetime import datetime
 from typing import Dict, Any
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 from core.config.config import config
@@ -48,6 +48,30 @@ class StockAnalyzerAPI:
 
         # Register routes
         self._register_routes()
+
+        # Serve React frontend build for all non-API routes (SPA fallback)
+        frontend_build = os.path.join(os.path.dirname(__file__), '..', '..', 'frontend', 'build')
+        if os.path.isdir(frontend_build):
+            # Override Flask's default static handler to serve from frontend/build/static
+            static_build = os.path.join(frontend_build, 'static')
+            if os.path.isdir(static_build):
+                def serve_static(filename):
+                    return send_from_directory(static_build, filename)
+                self.app.view_functions['static'] = serve_static
+
+            @self.app.route('/')
+            def serve_index():
+                return send_from_directory(frontend_build, 'index.html')
+
+            @self.app.route('/<path:path>')
+            def serve(path):
+                # Don't intercept API routes
+                if path.startswith('api/') or path in ('health', 'chat'):
+                    return jsonify({'error': 'Not found'}), 404
+                file_path = os.path.join(frontend_build, path)
+                if os.path.exists(file_path):
+                    return send_from_directory(frontend_build, path)
+                return send_from_directory(frontend_build, 'index.html')
 
         self.logger.info("Stock Analyzer API initialized")
 
