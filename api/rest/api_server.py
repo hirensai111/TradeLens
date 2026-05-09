@@ -61,7 +61,9 @@ class StockAnalyzerAPI:
 
             @self.app.route('/')
             def serve_index():
-                return send_from_directory(frontend_build, 'index.html')
+                resp = send_from_directory(frontend_build, 'index.html')
+                resp.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+                return resp
 
             @self.app.route('/<path:path>')
             def serve(path):
@@ -71,7 +73,13 @@ class StockAnalyzerAPI:
                 file_path = os.path.join(frontend_build, path)
                 if os.path.exists(file_path):
                     return send_from_directory(frontend_build, path)
-                return send_from_directory(frontend_build, 'index.html')
+                # Missing static assets (files with extensions) should 404, not return HTML
+                if os.path.splitext(path)[1]:
+                    return jsonify({'error': 'Not found'}), 404
+                # SPA fallback for route paths
+                resp = send_from_directory(frontend_build, 'index.html')
+                resp.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+                return resp
 
         self.logger.info("Stock Analyzer API initialized")
 
